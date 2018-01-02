@@ -1,0 +1,49 @@
+<html><body>
+<h3>[4] FINESTRA DI CALIBRAZIONE</h3>
+
+Col menu <u>Calirazione</u> della finestra dei DistoX si passa al dialogo con l'elenco delle 
+<a href="page_calib_dialog.htm">calibrazioni</a>
+del DistoX attivo. Qui puoi aprire una calibrazione esistente o crearne una nuova.
+In entrambi i casi arrivi alla finestra della calibrazione.<br><p>
+
+Questa finestra ha campi di testo:
+<ul style="margin-top=0">
+<li>nome: ogni calibrazione deve avere un nome univoco</li>
+<li>data.</li>
+<li>descrizione</li>
+</ul>
+e bottoni per l'algoritmo di calibrazione. Il default e' impostato a "auto", cioe' TopoDroid sceglie 
+l'algoritmo (lineare o non-lineare) in base al modello del DistoX e alla versione del firmware.<br><p>
+
+<h4>BOTTONI</h4>
+<ul style="margin-top=0">
+<li><u>Salva</u> i metadati della calibrazione</li>
+<li><u>Apri</u> la finestra con i dati di calibrazione</li>
+<li><u>Mostra</u> i coefficienti di calibrazione, precedentemente calcolati e memorizzati nel database</li>
+</ul><br><p>
+
+<h4>MENU</h4>
+<ul style="margin-top=0">
+<li><a href="page_calib_import.htm">export</a> della calibrazione</li>
+<li><u>Rimuovi</u> la calibrazione e i suoi dati dal database (azione non revertibile)</li>
+<li><u>Impostazioni</u></li>
+<li><u>Aiuto</u></li>
+</ul><br><p>
+
+<h4>IMPOSTAZIONI DI CALIBRAZIONE</h4>
+<ul style="margin-top=0">
+<li><i>Group policy</i>: come dividere i dati di calibrazione in <a href="page_groups.htm">gruppi</a> [default "group by 4"]</li>
+<li><i>Group tolerance</i>: massima distanza angolare tra dati consecutivi per decidere se stanno nello stesso gruppo (con la politica di rggruppamento basata sulle distanze angolari) [default 40 min 0]</li>
+<li><i>Errore</i>: il calcolo dei coefficienti termina quando la variazione di ogni coefficiente in un passo di iterazione e' inferiore all'errore [default 10<sup>-6</sup>i, min 0].</li>
+<li><i>Iterazioni</i>: massimo numero di iterazioni dell'algoritmo di calibrazione [default 200, min 50].</li>
+<li><i>Raw data</i>: per default TopoDroid mostra azimuth, clino, e roll. Con questa opzione puoi vedere i dati grezzi, decimali o hex [default "no"]</li>
+<li><i>Algoritmo</i>: puo' essere 0 (auto), 1 (lineare), 2 (non-lineare). Se la scelta dell'algoritmo nella calibrazione e' "auto", e questa impostazione non e' "auto", viene usato l'algoritmo della impostazione. Se sono entrambi "auto", TopoDroid sceglie automaticamente in base al modello e al firmware del DistoX [default "auto"]</li>
+</ul><br><p>
+
+<a href="page_calib_howto.htm">Guida alla calibrazione</a><br>
+<p>
+
+<a href="manual03.htm">&lt; Finestra DistoX</a> |
+<a href="manual05.htm">Dati di calibrazione &gt;</a>
+
+</body></html>

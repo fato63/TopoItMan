@@ -1,0 +1,49 @@
+<html><body>
+
+<h4>Base dati</h4>
+
+È utile avere un'idea approssimativa dell'organizzazione delle informazioni e dei dati nei database. Le unità di lavoro in TopoDroid sono i rilievi e le calibrazioni. Un rilievo è una singola sessione di rilievo di un pezzo di grotta. Una calibrazione è una singola calibrazione DistoX. <br>
+I rilievi sono archiviati nel database "distox14.sqlite". C'è un tale database in ogni cartella di lavoro. <br>
+Le calibrazioni sono memorizzate nel database "device10.sqlite", insieme alle informazioni DistoX. Questo database è globale ed è presente solo nella cartella "TopoDroid". <br>
+<P>
+ 
+Di conseguenza, la tabella più importante nel database del rilievo è:
+<ul>
+<li> <b>surveys</b>: informazioni sui rilievi</li>
+</ul> <br>
+Le registrazioni dei rilievi contengono il nome del rilievo, la data, la squadra, la declinazione magnetica, il nome della stazione iniziale ed eventualmente un commento. <br>
+
+Relativi ai rilievi sono le tabelle:
+<Ul>
+<li> <b>shots   </b>: dati del rilievo </li>
+<li> <b>stations</b>: capisaldi salvati</li>
+<li> <b>plots   </b>: disegni 2D; piante, sezioni, sezioni trasversali </li>
+<Li> <b>photos  </b>: immagini associate ai rilievi</li>
+<Li> <b>audios  </b>: commenti audio associati a sondaggi </ li>
+<li> <b>sensors </b>: misure associate agli scatti del sondaggio </ li>
+<li> <b>fixeds  </b>: (capisaldi geolocalizzati) </ li>
+<li> <b>sketches</b>: modelli 3D </ li>
+</ul> <br><p>
+
+Le tabelle più importanti nel database del dispositivo sono:
+<ul>
+<li> <b>devices</b>: informazioni sui dispositivi </li>
+<li> <b>calibs </b>: informazioni sulle calibrazioni </li>
+</ul> <br>
+ 
+La tabella "calibs" contiene il nome della calibrazione, la data, il dispositivo DistoX, l'algoritmo e i risultati dell'ultimo calcolo: coefficienti, errore medio, errore massimo, numero di iterazioni. <br> <p>
+
+Relativa alle calibrazioni è la tabella di dati
+<ul>
+<li> <b>gms</b>: dati di calibrazione </li>
+</ul> <br> <p>
+
+Per concludere, ogni database ha la tabella
+<ul>
+<li> <b> configurazioni </b>: valori di configurazione </ li>
+</ul> <br> <p>
+
+Puoi saperne di più sull'organizzazione dei dati nel database esaminandolo con un visualizzatore SQLite. <br> <p>
+
+</body></html>
+

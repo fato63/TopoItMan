@@ -1,0 +1,19 @@
+<html><body>
+
+<h4>La mappa finale</h4>
+
+Questa sezione descrive l'uso di <i>Therion</i> o <i>cSurvey</i> per redigere la mappa finale. <br> <p>
+
+Troverai, tra le altre cose, le note del rilievo (un file di testo), i file del disegno (file Therion th2) e il file Therion del rilievo. In questo file l'inclusione dei disegni viene inserita ma commentata. Per ottenere il disegno nei file PDF esportati è necessario decommentarli. È una buona idea aggiungere una mappa per ogni disegno (scrap); effettivamente due mappe una per il piano e l'altra per il profilo. <br> <p>
+
+Se vuoi compilare il progetto <i>Therion</i> devi fornire un file <i>thconfig</i> che può essere semplice come <br>
+<code>
+   source mio_rilievo.th
+<br>
+   export map -proj plan -o Pianta_grotta.pdf
+<br>
+   export map -proj extended -o Sezione_grotta.pdf
+</code> <br> <p>
+  
+In alternativa puoi lavorare con <i>cSurvey</i>. Apri il file di disegno esportato con csx con <i>cSurvey</i>: avrai la scheda dati compilata con i dati di rilievo ed i disegni correttamente allineati nell'area di disegno di <i>cSurvey</i>. <br> <p>
+</body></html>

@@ -1,0 +1,31 @@
+<html><body>
+
+<h4> Politiche di denominazione dei capisaldi</h4>
+
+Quando si scaricano dati, TopoDroid può assegnare automaticamente i nomi dei capisaldi. Una misurazione ripetuta è considerata una battuta, gli altri sono splay. Se ti attieni a questa convenzione nel prendere le misure, la denominazione automatica delle stazioni TopoDroid può essere molto utile. TopoDroid supporta un certo numero di convenzioni per assegnare automaticamente i capisaldi ai tiri. Puoi selezionare quello che meglio si adatta alle tue abitudini attraverso le impostazioni.
+<ul>
+<li> nel caposaldo "DA": prima gli splay e poi i tiri ripetuti verso il caposaldo A per la battuta. Questa è la convenzione predefinita. </li>
+<li> nel caposaldo "DA": per prima cosa esegui i tiri ripetuti verso il caposaldo A per la battuta e poi gli splay </li>
+<li> nel caposaldo "A": prima gli splay e poi i tiri ripetuti all'indietro verso il caposaldo DA per la battuta </li>
+<li> nel caposaldo "A": per prima cosa esegui i tiri ripetuti all'indietro verso il caposaldo DA per la battuta e poi gli splay </li>
+<li> in un caposaldo: per prima cosa esegui i tiri ripetuti all'indietro verso il caposaldo precedente e poi gli splay ed infine i tiri ripetuti verso il caposaldo A per la battuta. </li>
+<li> "treppiede": come il precedente ma con capisaldi intermedi senza splay </li>
+</ul> <br> <p>
+
+Un sondaggio con compensazione dell'anomalia magnetica locale deve utilizzare le ultime due politiche. <br>
+Il criterio "TopoRobot" è solo il primo, ma i nomi delle stazioni seguono la convenzione TopoRobot. <br>
+Esempi delle sei convenzioni (i tiri nello stesso caposaldo sono raggruppati tra parentesi):
+<ul>
+<li> ... (1-. 1-. 1-. 1-2) (2-. 2-. 2-3) ... </li>
+<li> ... (1-2 1-. 1-. 1-.) (2-3 2-. 2-.) ... </li>
+<li> ... (2-. 2-. 2-. 2-1) (3-. 3-. 3-2) ... </li>
+<li> ... (2-1 2-. 2-. 2-.) (3-2 3-. 3-.) ... </li>
+<li> ... (2-1 2-. 2-. 2-3) (3-2 3-. 3-. 3-4) ... </li>
+<li> ... (2-1         2-3) (3-2         3-4) ... </li>
+</ul><br>
+
+Sequenza a-b-c-d per la prima (Foresight - in avanti) e la terza (Backsight - indietro). <br>
+<img src="survey_policy.png">
+<br>
+
+</body></html>

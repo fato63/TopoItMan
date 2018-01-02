@@ -1,0 +1,64 @@
+<html><body>
+<h3>[2] FINESTRA PRINCIPALE</h3><p>
+
+La finestra principale di TopoDroid ha quattro bottoni in alto e la lista dei rilievi sotto.
+Questa lista e' vuota finche' non hai creato un rilievo.<br><p>
+
+La prima volta che apri il programma viene mostrato un dialogo di benvenuto.
+Puoi rivederlo dopo con il menu' "About"<br><p>
+
+Per uscire da TopoDroid fai un doppio click il bottone hardware "BACK".<br><p>
+
+<h4>AZIONI</h4>
+<ul style="margin-top=0">
+<li>un click su un rilievo apre la finestra dei tiri del rilievo</li>
+<li>un lungo-click su un rilievo apre la finestra dei metadati del rilievo</li>
+</ul><br><p>
+
+<h4>BOTTONI</h4>
+<ul style="margin-top=0">
+<li><u>DistoX</u>: apre la finestra dei dispositivi DistoX</li>
+<li><a href="page_new_survey.htm">Nuovo rilievo</a></li>
+<li><a href="page_import.htm">Importa</a> un rilievo o uno ZIP</li>
+<li><a href="page_tools.htm">Palette</a> abilita/disabilita strumenti di disegno</li>
+<li><a href="page_thmanager.htm">Manager</a> invoca l'app ThManager.</li>
+</ul><br><p>
+
+<h4>MENU</h4>
+<ul style="margin-top=0">
+<li><a href="page_symbol_reload.htm">Palette</a> [A] apre un dialogo per caricare strumenti di disegno addizionali.</li>
+<li><a href="page_cosurvey.htm">Cosurvey</a> [E] apre un dialogo per connettersi con un altro TopoDroid e fare un rilievo congiunto</li>
+<li><u>Impostazioni</u>: tutte le impostazioni del programma</li>
+<li>Impostazioni di <u>log</u> [E]. Il <a href="page_logging.htm">Logging</a> serve per risolvere errori.</li>
+<li><u>About</u>: il messaggio di benvenuto</li>
+<li><u>Aiuto</u> mostra una breve descrizione di bottoni e menu. In alto a destra vi e' un bottone (libricino) che apre il manuale utente. Ogni finestra di TopoDroid ha un analogo menu di "aiuto"</li>
+</ul><br><p>
+
+<h4>IMPOSTAZIONI</h4>
+<ul style="margin-top=0">
+<li><a href="page_cwd.htm">Cartella di lavoro</A> [default "TopoDroid"]</li>
+<li><a href="page_language.htm">Langua</a></li>
+<li><i>Dimensione testo</i> of the lists items [default 14, min 1]</li>
+<li><i>Dimensione bottoni</i>: small, normal (per 5"), medium, large (per tablet 7"), huge. [default normal]</li>
+<li><i>Tastiera</i> attiva o disattive la <a href="page_keypad.htm">tastiera</a> di TopoDroid.</li>
+<li><i>Livello di attivita'</i>: basic, normal, advanced, expert. [default normal].</li>
+<li><i>Cosurveying</i> [E] attiva/disattive il rilievo congiunto (molto sperimentale)</li>
+</ul><br><p>
+
+Dalle impostazioni della finestra principale, puoi passare alle altre: 
+<ul style="margin-top=0">
+<li>Import/Export</li>
+<li>Dati del rilievo</li>
+<li>Disegno</li>
+<li>Dispositivi DistoX</li>
+</ul><br><p>
+
+<hr>
+Se il <b>bluetooth</b> non e' attivo, l'app richiede di attivarlo. Senza di esso non puo' comunicare con il DistoX e i dati del rilievo possono solo essere
+immessi a mano. In tal caso il bottone di 
+<i>Download</i> della finestra dei dati non compare, e quello della fienstra di disegno e' rimpiazzato dal bottone per aggiundere un dato.<br><p>
+
+<a href="manual01.htm">&lt; Introduzione</a> |
+<a href="manual03.htm">Finestra DistoX &gt;</a>
+
+</body></html>

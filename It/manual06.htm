@@ -1,0 +1,119 @@
+<html><body>
+<h3>[6] FINESTRA DATI RILIEVO</h3>
+
+La finestra dei dai di rilievo contiene la lista dei tiri del rilievo.<br><p>
+
+TopoDroid distingue quattro tipi di dato (indicati con diversi colori)
+<ol>
+<li>[rosso] dati "blank", i.e, senza capisaldi</li>
+<li>[blue] "splay": con un solo caposaldo (solitamente il "DA")</li>
+<li>[bianco] "battuta" (primo dato di un gruppo di tiri ripetuti): ha entrambi i capisaldi "DA" e "A"</li>
+<li>[grigio] "battita-ripetuta" (gli altri tiri della battuta): non hanno capisaldi</li>
+</ol><p>
+Colori di sfondo:
+<ul>
+<li>blue (caposaldo): ultimi dati scaricati</li>
+<li>rosso (dati): dato <a href="page_accuracy.htm">inaffidabile</a>, i.e. con valori magnetici anomali (solo DistoX2)</li>
+<li>arancio (dati): battuta corta</li>
+</ul><br>
+<img src="shots_list.png" alt="shots list"/><p>
+
+<h4>AZIONI</h4>
+<ul style="margin-top:0">
+<li>click sul dato per il dialogo di <a href="page_shot_edit1.htm">editing</a></li>
+<!--li>tap on a shot clino: shot <a href="page_shot_edit2.htm">secondary actions</a></li-->
+<li>click sul caposaldo: mostra/nasconde gli splay al caposaldo</li>
+<li>lungo-click sul caposaldo: seleziona/deseleziona il <a href="page_current.htm">caposaldo "attivo"</a></li>
+</ul><br><p>
+
+<h4>BOTTONI</h4>
+<ul style="margin-top:0">
+<li><a href="page_download.htm">scarica</a> i dati dal DistoX. Non presente se nessun DistoX e' attivo</li>
+<li><a href="page_bluetooth.htm">Bluetooth</a></li>
+<li>Modalita' <a href="page_displaymode.htm">display</a> dati</li>
+<li>Dialogo <a href="page_plot_list.htm">disegni</a>.</li>
+<li><a href="page_survey_notes.htm">Appunti</a></li>
+<li>Inserimento battuta <a href="page_man_data.htm">manuale</a></li>
+<li><a href="page_saved_station.htm">Memorizzazione</a> caposaldo</li>
+<li>Riferimento <a href="page_azimuth.htm">extend</a></li>
+<li><a href="page_station_search.htm">Ricerca</a> caposaldo</li>
+</ul><br><p>
+
+<b>Lungo-click</b><br>
+<ul style="margin-top:0">
+<li>"Download": selezione DistoX</li>
+<li>"Disegno": apre subito l'ultimo disegno senza passare per il dialogo</li>
+<li>"Dati manuali": dialogo calibrazioni strumenti</li>
+<li>"Ricerca" caposaldo: riposiziona sul prossimo risultato della ricerca</li>
+</ul><br><p>
+
+
+Bottoni selezione multi-shot:<br>
+<ul style="margin-top:0">
+<li>imposta extend a <u>SX</u></li>
+<li>imposta extend a <u>DX</u></li>
+<li><u>rimuovi</u> i dati</li>
+<li><u>cancella</u></li>
+</ul><br><p>
+
+<h4>Dialogo disegni</h4>
+Con il dialogo disegni puoi creare un nuovo disegno (bottone in alto a sinistra) o aprirne uno esistente.
+I disegni sono mostrati su due colonne: a sinistra si aprono in pianta a destra in profilo.
+Dopo si puo' passare da uno all'altra nella finestra di disegno.<br><p>
+<!--
+If the 3D modelling is enabled there is also a button to create a new 3D model, and the existing 3D models are listed after the sketches.<br><p>
+-->
+
+<h4>MENU</h4>
+<ul style="margin-top:0">
+<li><u>Survey info</u>: finestra metadati rilievo</li>
+<li><u>Recupera</u>: un oggetto rimosso (tiro o disegno) <a href="page_undelete.htm">recovery</a></li>
+<li><u>Foto</u>: associate al rilievo</li>
+<li><u>Sensori</u>: misure sensoriali associate al rilievo</li>
+<li><u>3D</u>: (richiede <a page="manual14.htm">Cave3D</a>)</li>
+<li><u>DistoX</u>: finestra dispositivi DistoX</li>
+<li><u>Impostazioni</u></li>
+<li><u>Aiuto</u></li>
+</ul><br><p>
+
+<h4>IMPOSTAZIONI RILIEVO</h4>
+<ul style="margin-top:0">
+  <li><i>Squadra</i> di rilievo di default. Viene usata per il campo "squadra" quando crei un nuovo rilievo. [default niente]</li>
+  <li><i>Policy capisaldi</i>: per l'assegnazione automatica dei <a href="page_station_policy.htm">capisaldi</a> [default "splays+foresight"]</li>
+  <li><i>Nomi capisaldi</i> specifica il tipo: alfabetico o solo numeri [default "alphanumeric"]</li>
+  <li><i>Caposaldo iniziale</i>: nome del primo caposaldo per la finestra di creazione rilievo. [default niente]</li>
+  <li><i>Thumbnail size</i>: size of the photo thumbnails [default 200, min 80, max 400]</li>
+  <li><i>UNITA' PER I DATI</i>
+    <ul style="margin-top:0; margin-bottom:0">
+    <li><i>Lunghezze</i>: metri o piedi [default meters]</li>
+    <li><i>Angoli</i>: gradi sessagesimali (degree) o centesimali (grad) [default degrees]</li>
+    <li><i>Griglia disegni</i>: metri, yarde, o 2-ft [default meters]</li>
+    </ul>
+  </li>
+  <li><i>DATI</i>
+    <ul style="margin-top:0; margin-bottom:0">
+    <li><i>Massima lunghezza</i> tiro: se superata viene preso come "overshoots" [default 50 m, min 20 m]</li>
+    <li><i>Minima lunghezza</i>: battute piu; corte sono evidenziate con sfondo arancio [default 0.5 m]</li>
+    <li><i>Tolleranza</i> tiri di battuta: tolleranza angolare (percent) tra tiri consecutivi di una battuta [default 0.05, min 0]</li>
+    <li><i>Minimo</i> numero tiri consecutivi per fare una battuta. [default 2, min 2, max 4]</li>
+    <li>Soglia <i>verticale</i> splay: specifica come impostare l'<a href="page_azimuth.htm">"extend"</a> degli splay [default 10, min 0, max 90]</li>
+    <li>Soglia <i>verticale</i> battuta (Therion "vthreshold"): i valori LRUD impostati manualmente vengono considerati West-East-North-South se l'inclinazione supera questa soglia [default 80, min 0, max 90]</li>
+    <li><i>Extend</i> delle battute: fisso o relativo al <a href="page_azimuth.htm">riferimento extend</a> [default relative]</li>
+    <li>Compensazione errore <i>chiusura</i> anelli. E' meglio non compensare gli anelli per vedere graficamente gli errori di chiusura [default "none"]. IL valore "triangles" e' per la <a href="page_trilateration.htm">trilaterazione</a> [E].</li>
+    <li>Bottoni <i>prev/next</i> nel dialogo di edit dei tiri [default yes]</li>
+    <li>Campo <i>Backsight</i> nel dialogo per dati manuali [N] [default no]</li>
+    <li>Compensazione <i>anomalia magnetica</i>. Richiede la modalita' "backsight" [default off]</li>
+    <li><i>Tempo</i>: secondi di ritardo prima di misurare before measuring directions with the Android sensors [default 10, min 0]</li>
+    <li><i>Beep volume</i>: timer beep volume [N] [default 50, min 10, max 100]</li>
+    </ul>
+  </li>  
+  <li><i><a href="page_fixed_list.htm">GEO-REFERENZIAZIONE</a></i></li>  
+  <li><i><a href="page_accuracy.htm">ACCURATEZZA</a></i></li>
+</ul><br><p>
+
+Per uscire dalla finestra dati fai un doppio-click sul bottone hardware "BACK".<br><p>
+
+<a href="manual05.htm">&lt; Dati di calibration</a> |
+<a href="manual07.htm">Lista dati &gt;</a>
+
+</body></html>

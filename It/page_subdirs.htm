@@ -1,0 +1,53 @@
+<html><body>
+
+<h4>Sottodirectory TopoDroid</h4>
+
+Ecco alcune informazioni su come vengono memorizzati i dati del rilievo, i dati di calibrazione ed i disegni. Puoi tranquillamente saltare le seguenti e le prossime due sezioni e tornarvi in seguito, se necessario. <br> <p>
+
+L'app crea la sua directory di base predefinita, chiamata "TopoDroid", nella memoria esterna principale (in genere /sdcard). Questa directory non viene rimossa quando si disinstalla l'app. In questa directory l'app crea due database SQLite. Il primo è "device10.sqlite", in cui sono memorizzati i dati di calibrazione, le informazioni DistoX e altri dati. Il secondo è "distox14.sqlite" e memorizza i dati dei rilievi. L'app crea anche sottodirectory per i diversi tipi di file. Queste sottodirectory vengono create solo nella directory di base "TopoDroid":
+<ul style = "margin-top: 0">
+<li> bin: file del firmware DistoX2 </li>
+<li> ccsv: file di testo CSV delle calibrazioni esportate </li>
+<li> dump: file di memoria DistoX </li>
+<li> Symbol: strumenti di disegno (punti, linee, aree) </li>
+</ul>
+La sottodirectory "symbol" contiene i file degli strumenti di disegno.
+"bin" è usato per memorizzare i file del firmware, sia i file di fabbrica inclusi in TopoDroid che i dump del firmware letti da un DistoX. <br> <p>
+
+Le seguenti sottodirectory vengono create in ogni directory di lavoro:
+<ul style="margin-top: 0">
+<li>audio: <i>audio</i> commenti</li>
+<li>cave: <i>Polygon</i> file</li>
+<li>cav: <i>Topo</i> file</li>
+<li>csv: file di testo CSV dei rilievi esportati</li>
+<li>csx: <i>cSurvey</i> file esportati per cSurvey</li>
+<li>dat: <i>Compass</i> file esportati per Compass</li>
+<li>dxf: file DXF esportati per AutoCAD </li>
+<li>grt: <i>Grottolf</i> file esportati per Grottolf</li>
+<li>gtx: <i>GHTopo</i> file esportati per GHTopo</li>
+<li>import: file di rilievi da importare (formati: <i>Therion</i>, <i>Compass</i>, <i>VisualTopo</i>, and <i>PocketTopo</i>)</li>
+<li>kml: <i>GoogleEarth</i> file esportati per GoogleEarth [A]</li>
+<li>note: file di annotazioni dei rilievi</li>
+<li>photo: foto dei rilievi (ogni rilievo ha la sua sottodirectory)</li>
+<li>plt: <i>OziExplorer</i> file di traccia esportati [A]</li>
+<li>png: file di disegni esportati</li>
+<li>srv: <i>Pareti</i> file esportati per rilievi</li>
+<li>svg: file SVG esportati da disegni</li>
+<li>sur: <i>WinKarst</i> file esportati per WinKarst</li>
+<li>svx: <i>Survex</i> file esportati per Survex</li>
+<li>tdr: file di disegni formato binario</li>
+<li>th: <i>Therion</i> file esportati per Therion</li>
+<li>th2: scrap file di <i>Therion</i></li>
+<li>th3: file per modelli 3D</li>
+<li>tmp: per file temporanei. I file in questa directory possono essere cancellati.</li>
+<li>top: <i>PocketTopo</i> file esportati per PocketTopo</li>
+<li>tro: <i>VisualTopo</i> file esportati per VisualTopo</li>
+<li>zip: archivi ZIP (file esportati ed importabili)</li>
+</ul>
+Some of these subdirectories are used only to store exported files (cav, cave, csx, dat, dxf, png, svx, th, th2, top, tro). Others are used to store data (tdr, th3, note, photo). 
+The subdirectory "zip" is used to store zipped archives as well to read them and uncompress in TopoDroid. When you want to import a survey made with another program (<i>Therion</i>, <i>Compass</i>, <i>VisualTopo</i>, or <i>PocketTopo</i>) you must place it in the subdirectory "import".<br><p>
+
+Alcune di queste sottodirectory vengono utilizzate solo per memorizzare i file esportati (cav, cave, csx, dat, dxf, png, svx, th, th2, top, tro). Altre sono usate per memorizzare dati (tdr, th3, note, foto).
+La sottodirectory "zip" viene utilizzata per salvare i file dei rilievi compressi e per leggerli e decomprimerli in TopoDroid. Quando vuoi importare un rilievo realizzato con un altro programma (<i>Therion</i>, <i>Compass</i>, <i>VisualTopo</i> o <i>PocketTopo</i>) devi posizionarlo nella sottodirectory "import". <br> <p>
+
+</body></html>

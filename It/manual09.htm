@@ -1,0 +1,175 @@
+<html><body>
+<h3>[9] FINESTRA DISEGNO</h3>
+
+Il bottone "disceno" della finestra dei dai di rilievo apre il dialogo dei disegni, che contiene un bottone per creare un nuovo disegno, e la lista degli schizzi del rilievo.<br><p>
+
+Ogni schizzo si compone di due file, il primo per la pianta e il secondo per il profile (esteso o projettato). Le sezioni trasversali (x-section) hanno un solo file. Quando uno schizzo e` creato viene aperto in vista pianta. In seguito il dialogo riporta due colonne, a sinistra le piante a destra i profili. Con un click su uno si apre la finestra di disegno in pianta o in profile.<br><p>
+
+La vista in pianta mostra la projezione sul piano orizzontale della poligonale (inclusi gli splay). Gli splay oltre una certa inclinazione sono tratteggiati.<br><p>
+
+Il profilo esteso mostra la poligonale con le betture orientate a destra, o a sinistra, o verticalmente a seconda del loro "extend". Gli splay sono projettati sul piano verticale della battuta piu' vicina in azimuth. 
+Per esempio con la vista in pianta in figura, gli splay nella regione chiara sono projettati nel piano verticale della battuta 1-2, quelli della regione scura nel piano verticale della battuta 0-1.<br><p>
+
+Il profilo projettato mostra poligonale e splay projettati sul piano verticale perpendicolare all'azimuth di projezione.<br><p>
+
+
+<img src="splay_extend.png"><br><p>
+
+
+La finestra di disegno ha quattro modi di operazione,
+<ul style="margin-top=0">
+<li><b>muovi</b>, e' il modo di default: puoi spostare il disegno e zoomare. Se 
+abiliti la box "fixed ref" nel dialogo del display, il movimento riguarda solo gli oggetti disegnati [E]</li>
+<li><b>disegna</b> simboli iconografici, scritte, linee, aree (cioe' regioni chiuse con un colore di sfondo).</li>
+<li><b>cancella</b> oggetti disegnati o porzioni di essi (per linee e aree)</li>
+<li><b>editing</b> [A]: cambiamenti puntuali e modifiche alle propieta' degli oggetti, incluso il rimuoverli.</li>
+</ul><br><p>
+
+Muovere e zoomare sono possibili anche in modalita' <b>disegno</b> e <b>cancella</b> usando due dita (multitouch). Se i controlli di zoom sono abilitati (temporanei o permanenti) puoi usare loro per zoomare. Se sono temporanei appaioni quando tocchi il display al centro in basso. Se il "side-drag" e' abilitato, puoi translare il disegno "afferrando" i bordi sinistro o destro del display.<br><p>
+
+
+<h4>BOTTONI</h4>
+I modi operativi sono rappresentati da tre bottoni verdi a sinistra nella barra:
+<u>disegno</u>, <u>cancella</u>, e <u>editing</u>.
+Quando uno di essi e` attivo il bottone ha un bordo bianco. Se nessuno e' attivi sei in modalita' "muovi".<br><p>
+
+Quando un bottone verde e' attivi, un lungo-click su esso apre u dialogo con le impostazioni relative alla modalita' operativa del bottone.<br><p>
+
+Gli altri bottoni differiscono a seconda della modalita' operativa.
+Nel caso "muovi" sono
+<ul style="margin-top=0">
+<li><u>Scarica</u> dati.  Gli ultimi tiri scaricati sono evidenziati in blue. Se non c'e' alcun DistoX attivi il bottone e' nascosto</li>
+<li><a href="page_bluetooth.htm">Bluetooth</a> reset/controls</li>
+<li><a href="page_survey_notes.htm">Annotazioni</a></li>
+<li><a href="page_drawing_refs.htm">Riferimenti</a>: battute, splays, capisaldi, griglia, barra di scala.</li>
+<li>Commutatore <u>Pianta/Profilo</u>.</li>
+<li>Riferimento per l' <a href="page_azimuth.htm">"extend"</a></li>
+</ul><br><p>
+
+Il modo <b>disegno</b> ha
+<ul style="margin-top=0">
+<li><u>Undo</u> rimuove l'ultimo oggetto disegnato, uno alla volta</li>
+<li><u>Redo</u> rimette l'ultimo oggetto rimosso, uno alla volta. La lista degli oggetti rimossi viene svuotata quando disegni un nuovo oggetto. Anche certe azioni di editing puntuale possono cambiare l'ordine degli oggetti nella lista.</li>
+<li>Selezione <a href="page_tools_recent.htm">strumento da disegnno</a></li>
+<li><u>Continuazione</u> linea</li>
+</ul><br><p>
+
+Il modo <b>cancella</b> ha
+<ul style="margin-top=0">
+<li><u>Undo</u></li>
+<li><u>Redo</u></li>
+<li><u>Filtro</u> limita la cancellazione a punti, linee, aree</li>
+<li><u>Scala</u> di cancellazione [S, M, L]</li>
+</ul><br><p>
+
+Il modo <b>editing</b> ha
+<ul style="margin-top=0">
+<li><u>Filtro</u> limita gli elementi selezionabili [tutti, punti, linee, aree, tiri, capisaldi]</li>
+<li><u>Scala</u> di selezione [S, M, L]</li>
+<li>Azioni <u>Puntuali</u></li>
+<li>Editing di <u>proprieta'</u></li>
+<li><u>Rimozione</u> dell'oggetto dal disegno. Richiede conferma perche' e' irreversibile</li>
+<li><u>Tipo</u> di selezione: puntuale o locale (solo per linee e bordi aree).</li>
+</ul><br><p>
+Se ci sono elementi selezionati i primi due bottoni diventano <u>previous/next</u> e servono per navogare nell'insieme degli elementi selezionati.<br><p>
+of the selected items.<br><p>
+
+I bottoni sono un poco diversi per le sezioni.
+In modalita' "muovi" i bottoni "scarica", "bluetooth", "switch", e "azimuth" non ci sono. C'e' invece un bottone per decidere quali splay visualizzare: di entrambi icapisaldi, di quello di fronte, di quello dietro, nessuno.
+Concordemente il dialogo per i riferimenti non ha il bottone degli splay.<br><p>
+
+<h4>MENU</h4>
+<ul style="margin-top=0">
+<li><u>Export</u>: il disegno puo' esser <a href="page_plot_export.htm">esportato</a> come file 2D <i>Therion</i>, <i>cSurvey</i> (file singolo), PNG (due files), DXF (due files), e SVG (due files).</li>
+<li><a href="page_stat2.htm">Statistiche</a>. Per le sezioni questa e' l'area della sezione.</li>
+<li><u>Ricarica</u> il disegno da un <a href="page_backup.htm">backup</a>.</li>
+<li><u>Zoom</u> il disegno al display.</li>
+<li><u>Cambia</u> ad un altro disegno.</li>
+<li><u>Rinomina/Rimouvi/Dividi</u> il disegno. Disegni rimossi possono essere recuperati con la funzione di recupero della finestra di info rilievo.</li>
+<li>Palette degli <a href="page_tools.htm">strumenti di disegno</a></li>
+<li>Finestra <u>overview</u>, mostra tutti i disegni assieme. [solo pianta e profilo esteso]</li>
+<li><u>Impostazioni</u></li>
+<li><u>Aiuto</u></li>
+</ul><br><p>
+
+
+<h4></h4>
+<ul style="margin-top=0">
+  <li><i>Selezione strumenti di disegno</i>: piu'-recente [default], o lista, o griglia, o tripla-griglia</li>
+  <li><i>Numero recenti</i> da mostrare nel dialo di selezione dei piu'-recenti [3, 4, 5, o 6]</li>
+  <li><i>Side drag</i>: abilita la traslazione iniziata dal lato</li>
+  <li><i>Controlli zoom</i>: se mostrarli su un dispositivo multitouch [B]. I controlli di zoom possono esser inibiti, temporanei (visualizzati per un brev etempo quando si tocca il display in centro in basso) o permanenti.</li>
+  <li><i>Verifica poligonale</i>: verifica se tutte la poligonale non e' spezzata</li>
+  <li><i>aree xtherion</i> salva i disegni in formato Therion (th2) aggiungendo un punto di chiusura ai bordi delle aree</li>
+  <li><i>STRUMENTI PUNTO</i>
+    <ul style="margin-top:0; margin-bottom:0">
+    <li><i>Non-zoomed</i>: gli oggetti iconografici mentengono dimensioni fisse indipendenti dallo zoom del disegno</li>
+    <li><i>Scala base</i> per le icone</li>
+    <li><i>Dimensione testi</i> [default 24 pt]</li>
+    </ul>
+  <li><i>STRUMENTI LINEA</i>
+    <ul style="margin-top:0; margin-bottom:0">
+    <li><i>Stile</i>: fine, normale, grossolano, o "bezier" (curva interpolata)</li>
+    <li><i>Spessore</i> linee</li>
+    <li><i>Lunghezza</i> tratto di direzione per le sezioni [default 5 px]</li>
+    <li><i>Spaziatura</i> punti: distanza fra punti della linea nello stile normale [default 5 px] </li>
+    <li><i>Accuratezza</i> di Bezier determina il numero di punti base nella curva di interpolazione. Piu' e' piccola piu' sono i punti. Defailt 1.0</li>
+    <li><i>Angolarita'</i> di Bezier. Anche la linea interpolata puo' esser spezzata e avere angoli dove c'e' una curva netta. Valori piccoli (0.2) corrispondono a angoli piu' netti. Valori larghi (20.0) ad angoli arrotondati</li>
+    </ul>
+  </li>
+  <li><i>ELEMENTI DEL DISEGNO</i>
+    <ul style="margin-top:0; margin-bottom:0">
+  <li>Soglia <i>splay in pianta</i>: splay con inclinazione oltre questa soglia non vengono mostrati in pianta</li>
+  <li>Soglia <i>splay tratteggiati</i>: splay con inclinazione oltre questa soglia sono tratteggiati</li>
+  <li>Soglia horizzontale <i>sezioni</i>: angolo di inclinazione della battuta oltre il quale le sezioni trasversali sono orizzontali (sotto sono vertocali)</li>
+    <li><i>Spessore</i> linee poligonale</li>
+    <li><i>Dimensione</i> nomi capisaldi [default 18 pt] [N]</li>
+    <li>Dimensione <i>punti verdi</i> in modo <b>editing</b> [default 5 px] [A]</li>
+    <li>Raggio di <i>selezione</i> [default 16 px] [A]</li>
+    <li>Radius of <i>puntamento</i>: se il punto dove si tocca lo schermo si sposta oltre questo raggio non avviene la selezione [A]</li>
+    <li>Dimensione di <i>cancellazione</i></li>
+    <li><i>Sensitivita'</i> di traslazione: massimo spostamento per un passo di traslazione [default 60 px] [E]. Aumentalo se la traslazione e' irregolare</li>
+    </ul>
+  </li>
+  <li><i>AUTO WALLS [E]</i>: <a href="page_walls.htm">impostazioni</a></li>
+</ul>
+
+<h4>Cache dei disegni</h4>
+Una volta aperti i disegni restano in memoria, in una cache.
+Questo velocizza il passaggio da un disegno all'altro evitando il caricamento del disegno da file. La cache dei disegni viene ripulita quando si chiude il rilievo<br><p>
+
+<h4>Formato file di disegno</h4>
+Un disegno viene salvato su file quando viene modificato o quando si commuta ad un'altra vista (pianta, profilo, sezione). Per efficienza TopoDroid salva i disegni in formato binario.<br><p>
+
+<h4>Selezione punti [A]</h4>
+Per editare devi selezionare un punto: punto base di una icona, un punto di una linea, un caposaldo o un tiro.<br>
+A tal fine tocca vicino al punto. Puo' succedere che si sono diversi punti vicino a dove hai toccato lo schermo, e tutti rientrano nell'insieme
+selzionato. Pero' solo uno e' attivo in editing. Puoi navigare nell'insieme dei punti selezionati con i bottoni <u>Previous / Next</u> fino al punto che volevi.<br><p>
+
+<h4>Stili linee</h4>
+TopoDroid ha quattro stili di linea. Con quello "normale" [default] le linee sono tracciate come polilinee (cioe' spezzate). Nello stile "fine" i segmenti delle polilinee sono piu' corti, e in quello "grossolano" piu' lunghi. Nel quarto stile (Bezier) i segmenti di linea vengono interpolati con delle curve cubiche di Bezier. Queste interpolanti passano per due estremi e hanno due punti di controllo che ne determinano la curvatura.<br><p>
+
+<h4>Continuazione di linee</h4>
+Il bottone di <u>Continuazione</u> e' multistato:
+<ul>
+<li><i>off</i>: le linee non sono congiunte</li>
+<li><i>no</i>: le linee del tipo corrente non sono collegate</li>
+<li><i>start</i>: la linea viene collegata ad una dello stesso gruppo se il punto di partenza risulta vicino ad uno degli estremi di tale linea</li>
+<li><i>end</i>: la linea viene collegata col punto finale</li>
+<li><i>both</i>: la linea viene collegata sia col punto iniziale che con quello finale</li>
+<li><i>continue</i>: la linea diventa la continuazione di un'altra se il suo punto iniziale risulta vicino a quello finale dell'altra</li>
+</ul>
+ 
+<b>Attenzione. Se il disegno scompare dal display, commuta tra pianta e profilo per forzare TopoDroid a ridisegnarlo.</b><br><p>
+
+
+<a href="page_tools.htm">Palette strumenti di disegno</a><br>
+<a href="page_therion_stations.htm">Punti Therion station</a><br>
+<a href="page_undo.htm">Stack undo</a><br>
+<a href="page_shift.htm">Traslazione e flip del disegno</a><br>
+<p>
+
+<a href="manual08.htm">&lt; Info rilievo</a> |
+<a href="manual10.htm">Disegno schizzi &gt;</a>
+
+</body></html>

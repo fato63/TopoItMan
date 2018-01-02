@@ -1,0 +1,90 @@
+<html><body>
+<h3>[10] DISEGNO SCHIZZI</h3>
+
+La canvas mostra la poligonale e gli splay. Si puo' muoverlo trascinandolo con uno o due dita, zoomare con due dita.
+Nella vista in pianta il nord e' verso l'alto. Nel profilo la verticale e' verso l'alto.
+Non e' possibile ruotare la canvas.<br><p>
+
+Un click sul bottone "disegno" commuta la finestra in modalita' di disegno, e il bottone ha un bordo bianco.
+In questa modalita' puoi disegnare con un dito (due dita per traslazioni e zoom). 
+Col bottone <u>undo</u> e <u>redo</u> cancelli l'ultimo oggetto disegnato e lo rimetti.<br><p>
+
+Sempre in modalita' di disegno, la canvas puo' esser traslata trascinandola a partire da un lato, se il "side-drag" e' abilitato, e lo zoom puo' esser fatto con i
+controlli di zoom che compaiono in basso, se abilitati. In tal modo puoi lavorare con uno stilo senza bisogno di usare due dita.<br><p>
+
+Con il bottone del <a href="page_tools.hm">selettore</a> strumenti di disegno cambi lo strumento da usare: linea, area, o simbolo iconografico.<br><p>
+
+<b>Strumenti punto</b><br>
+I punti sono simboli iconografici. Per aggiungere un simbolo tocca la canvas nel punto dove lo vuoi posizoinare.
+Per i testi (label) devi pure scrivere il testo nel dialogo che appare.<br><p>
+
+<b>Strumenti linea</b><br>
+Le linee si distinguono per lo stile con cui sono disegnate.
+Le linee hanno una orientazione; quando sono selezionate in editing l'orientazione e' indicata da un trattino giallo che punta a sinistra della linea.<br><p>
+
+Lo spessore delle linee e quello dei segmenti di poligonale sono due impostazioni.<br><p>
+
+La linea "sezione" e' speciale poiche' viene sempre resa come un segmento con un piccolo tratto ad indicare il verso di vista della sezione.
+Un punto "sezione" viene aggiunto automaticamente vicino alla fine della linea. Questo punto ha l'opzione "scrap" preimpostata allo scrap della linea e viene rimosso se la corrispondente linea sezione e' rimossa.<br><p>
+
+<b>Strumenti area</b><br>
+Un'area e' mostrate come ombreggiatura (shader). Per disegnarla tracciane il bordo, basta che lo lasci leggermente aperto, perche'
+TopoDroid sioccupa di chiuderlo.<br>
+L'area "acqua" (water) e' speciale perche' puo' esser chiusa orizzontalmente nel profilo e nelle sezioni verticali, dato che le pozze d'acqua sono superfici
+orizzontali. Quindi basta che tracci solo il bordo inferiore avendo cura di terminarlo piu' o meno alla stessa altezza del punto di partenza.<br><p>
+
+<b>Undo, redo, cancellare ed editare</b><br><p>
+Gli errori di disegno possono esser corretti. Il bottone <u>undo</u> rimuove l'ultimo oggetto disegnato. Per cancellare un punto o una linea disegnata molto prima,
+senza perdere il lavoro intermedio, hai due scelte: il modo <u>cancella</u> o quello di <u>editing</u>.<br><p>
+
+La cancellazione e' molto intuitiva: cancella ogni cosa su cui passi il dito, come con una gomma da cancellare sulla carta. Se la passi nel mezzo di una linea viene cancellato solo il tratto in mezzo (lasciando cosi' due linee). La cancellazione puo' essere "filtrata" per cancellare solo gli oggetti di un dato tipo: punti, linee, o aree.<br><p>
+
+Il bottone di <u>editing</u> non e' altrettanto intuitivo, ma e' molto potente, perche' permette operazioni puntuali.
+In questa modalita' tutti i punti degli elementi del disegno appaiono come pallini verdi (i simboli iconici hanno un solo pallino). Quando selezioni, se ci sono piu' punti vicini, vengono tutti selezionati (e indicati con un cerchio rosa), ma solo uno e' quello in editing (quello col grosso cerchio verde). 
+L'oggetto cui appartiene il punto in editing e' indicato sopra i bottoni.
+Se non e' qullo che vuoi editare, puoi muoverti all'interno dell'insieme dei punti selezionati con i bottoni "previous" e "next".<br><p>
+
+La selezione di editing puo' essere filtrata per classi: punti, linee, area, tiri, capisaldi.<br><p>
+
+La dimensione dei pallini verdi e il raggio di selezione sono impostazioni della finestra di disegno.<br><p>
+
+I segmenti delle linee Bezier hanno due punti di controllo. Questi sono memorizzati assieme al punto finale del segmento e quando questo viene selezionato in editing
+i due punti di controllo vengono mostrati come cerchietti rosa. Ognuno di essi puo' esser spostato trascinandolo col dito.<br><p>
+
+Per deselezionare tocca la canvas da qualche parte. Per muovere il punto slezionato trascinalo col dito. L'oggetto del punto selezionato puo' esser rimosso oppure se ne possono editare le <a href="page_item_edit.htm">proprieta'</a> (bottone "nota"). L'editing delle proprieta' si applica anche ai tiri e ai capisaldi.
+<br><p>
+
+Se si seleziona un punto con icona orientabile, questa puo' esser ruotata con scorrendo in su' e in giu' lungo il bordo sinistro o destro del display (side-drag).<br><p>
+
+<h4>Azioni di editing puntuale [A]</h4>
+
+Il secondo bottone da destra ha un menu a cascata per operazioni speciali, per punti [P], linee [L] e aree [A].
+<ul style="margin-top=0">
+<li><i>Muovi al punto piu' vicino</i> [P,L,A]: (se vi e' un punto abbastanza vicino)</li>
+<li><i>Muovi agli splay/linea vicino</i> [L,A]. la linea viene deformata e fatta passare per i punti finali degli splay che sono abbastanza vicini. Per un'area il punto viene portato a coincidere con il punto di linea piu' vicino e il bordo dell'area, prima e dopo di esso, viene deformato seguendo la linea.</li>
+<li><i>duplica</i> il punto [L,A]. Il nuovo punto e' inserito dopo quello selezionato ed e' aggiunto all'insieme di selezione. Quindi puoi selezionarlo con i bottoni "previous/next".</li>
+<li><i>Taglia</i> [L] la linea nel punto ottenendo due linee</li>
+<li><i>Raddrizza</i> [L,A] il segmento di linea rimuovendo i punti di controllo</li>
+<li>Inserisci <i>punti di controllo</i> [L,A] nel segmento a 1/3 e 2/3 della lunghezza. Questi possono poiesser spostati per dare curvatura al segmento</li>
+<li><i>Remuovi</i> [L,A] il punto della linea/area. Il punto puo' esser rimosso anche con un lungo-click sul bottone "delete"</li>
+</ul><br><p>
+
+<h4>Modi di selezione range</h4>
+I punti di linee o aree possono esser selezionati individualmente oppure come intervallo.
+Per selezionare un intervallo l'ultimo bottone della barra deve essere attivo, poi selezioni il punto iniziale e quello finale.<br><p>
+
+L'intervallo e' evidenziato in arancio, e il punto medio ha in grosso cerchio verde, e controlla come viene deformato l'intervallo di linea.
+I punti dell'intervallo possono esser translati solidarmente con il punto centrale (hard shift) oppure vengono traslati sempre meno man mano che sono vicini
+agli estremi dell'intervallo.<br><p>
+<br><p>
+
+
+
+<a href="page_sketch_station.htm">Editing capisaldi sul disegno</a><br>
+<a href="page_tools.htm">Strumenti di disegno</a><br>
+<a href="page_walls.htm">Auto walls</a><br>
+<p>
+<a href="manual09.htm">&lt; Finestra di disegno</a> |
+<a href="manual11.htm">Sezioni &gt;</a>
+
+</body></html>

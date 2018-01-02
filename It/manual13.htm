@@ -1,0 +1,254 @@
+<html><body>
+<h3>[13] IMPORT EXPORT </h3>
+Quando hai finito, esporta il rilievo nel formato preferito e fai uno zip.
+Lo zip e'un backup completo del tuo rilievo e gli esport. Puo' esser usato per traferire il rilievo su un altro android.<br><p>
+
+
+
+<b>Attenzione</b><br>
+L'archivio zip contiene i comandi per ricostruire i dati del rilievo e le altre info nel database. L'importazione di uno zip puo' fallire se lo zip e' fatto con una versione troppo vecchia del database, oppure da una versione troppo recente di TopoDroid.<br><p>
+
+Dopo aver saricato lo zip sul PC e scompattato, puoi completare la mappa della grotta con qualsiasi programma usi.<br><p>
+
+TopoDroid importa rilievi in formato therion, compass, visualtopo e pockettopo. Pero' il supporto di import potrebbe essere parziale.<br><p>
+
+
+<h4>Formato di export di default</h4>
+TopoDroid ha due impostazioni per selezionare gli export: uno per i dati di rilievo e uno per i disegni. Per default questi sono messi a "none", cioe' nessun export.
+<br><p>
+
+Quando l'export di default e' impostato, TopoDroid esporta i dati del rilievo in quel formato prima di fare uno zip, in modo che il file esportato sia inserito nello zip.<br><p>
+
+Quando l'export di default per i disegni e' impostato, il disegno viene esportato in tale formato ogni qual volta viene chiuso (oltre ad essere salvato nel formato binario di TopoDroid).<br>
+Per cSurvey le sezioni sono salvate come immagini PNG.<br><p>
+
+
+<h4>EXOORT DEI DATI</h4>
+
+Nota. I punti georeferenziati sono esoortati con coordinate latitudine-longitudine [gradi decimali] e altitudine sul livello medio del mare [m].
+<br><p>
+
+<b>Therion</b> (.th)<br>
+I dati di rilievo sono esportati in formato Therion usando il formato dati "normal"<br>
+Le unita' dei dati sono in accordo con le impostazioni.<br>
+I nomi dei rilevatori sono rioortati ma il comando "team" e' commentato.<br>
+I commenti dei capisaldi e i marchi (fixed, painted) precedono i dati di poligonale.<br><p>
+
+Le coordinate dei punti georeferenziati (longitudine, latitudine, altitudine) sono esportate commentate.
+Se il punto ha anche coordinate in un altro CRS, pure queste sono esportate, precedute dal nome del CRS.<br><p>
+
+Inoltre gli "input" dei file th2 e le definizioni dei relativi "map" per ogni scrap vengono aggiunte alla fine (o all'inizio), ma commentate.<br><p>
+
+
+Impostazioni
+<ul>
+<li><u>Therion Maps</u>: se abilitata i comandi "map" sono prima della poligonale.</li>
+<li><u>LRUD</u>: aggiungi gli LRUD nell'export</li>
+</ul><p>
+
+I file di Therion in import devono aver estensione ".th".<br>
+TopoDroid non riconosce completamente la sintassi di Therion. In pratica solo i dati in formato "normal" sono riconosciuti. I comandi
+"units", "flag", "extend", "mark" e "station" sono gestiti.<br>
+I punti georeferenziati ("fix") sono parsificati, ma non tenuti in conto poiche' il comando "cs" non e' gestito.<br><p>
+
+<b>Compass</b> (.dat)<br>
+Il formato file di Compass e' supportato sia in export che in import.<br>
+I file compass in import devono avere estensione ".dat".<br>
+Le unita' dei dati sono 'feet' (piedi) e gradi sessagesimali.<br><p>
+
+<b>PocketTopo</b> (.top)<br>
+TopoDroid supporta <i>PocketTopo</i> sia in import che in export.<br><p>
+
+L'export PocketTopo contiene solo i dati del rilievo<br>
+Se la politica di assegnazione capisaldi e' impostata a "TopoRobot", e i nomi dei capisaldi seguono la convenzione "serie.numero"
+questi vengono usati nell'esportazione, altrimenti i nomi dei capisaldi sono coinvertiti in numeri.
+I caratteri alfabeici vengono rimpiazzati con due cifre ciascuno. Piu' precisamente 'a' diventa "00", 'b' "01" e cosi' via, 'A' diventa "50", 'B' "51" etc..
+Ogni altri carattere non alfabetico o numero viene messo a "99".<br><p>
+
+I file PocketTopo in import devono avere estensione ".top".<br>
+Anche i disegni "outline" e "profile" sono importati. PocketTopo usa solo alcuni colori per le linee. Percio' TopoDroid utilizza una
+<a href="page_pt_cmap.htm">tabella</a> per passare dai colori a tipi di linea. Questa tabella puo' esser modificata tramite le impostazioni.<br><p>
+
+Puo' succedere che il disegno non viene importato allineato alla poligonale.
+In tal caso puoi traslarlo nella finestra di disegno (dialogo dei riferimenti).<br><p>
+
+<b>Polygon</b> (.cave)<br>
+TopoDroid esporta i dati in formato <i>Polygon</i>. I punti georeferenziati sono esportati come lat-long.<br><p>
+
+<b>GHTopo</b> (.gtx)<br>
+TopoDroid esporta i dati in formato GHTopo (testato parzialmente).<br><p>
+
+<b>Grottolf</b> (.grt)<br>
+TopoDroid esporta i dati informato Grottolf (non testato).
+Se il primo caposaldo ha coordinate geografiche queste vengono esportate, altrimenti coordinate locali sono usate.
+I profili ai capisaldi sono calcolati projeattando gli splay sul piano verticale perpendicolare all'azimuth della battuta.<br><p>
+
+<b>Survex</b> (.svx)<br>
+TopoDroid esporta idati in formato Survex.<br>
+Le unita' dei dati sono quelle impostate dall'utente.<br><p>
+
+Impostazioni:<ul style="margin-top=0">
+<li><u>terminazione riga</u>: Unix o Windows</li>
+<li><u>capisaldi 'A' con nome</u> per gli splay (nome = caposaldo "DA" seguito da una lettera)</li>
+<li>aggiungere <u>LRUD</u> nell'export</li>
+</ul><p>
+
+<b>Topo</b> (.cav)<br>
+I dati dle rilievo possono esser esportati come file Topo.<br><p>
+
+Impostazioni:<ul style="margin-top=0">
+<li><u>terminazione riga</u>: Unix o Windows</li>
+</ul><p>
+
+<b>TopoRobot</b> (.trb)<br>
+I dati del rilievo possoo esser esportati come file TopoRobot. La politica assegnazione capisaldi deve esser impostata a "TopoRobot".
+Se i nomi dei capisaldi seguono la convenzione TopoRobot, "serie.numero", essi sno usati.<br><p>
+
+<b>VisualTopo</b> (.tro)<br>
+I file VisualTopo sono supportati sia in import che in export.<br>
+I file di import devono aver estensione ".top".<br>
+Le unita' sono metri e gradi.<br><p>
+
+<b>Walls</b> (.srv)<br>
+I dati del rilievo possono esser esportati in formato Walls (parzialmente testato).<br>
+Le unita' dei dati seguono le impostazioni utente.<br><p>
+
+<b>WinKarst</b> (.sur)<br>
+I dati del rilievo possono essere esportati come file WinKarst (non testato).<br><p>
+
+<b>PLT</b> (.plt)<br>
+I dati del rilievo possono esser esportati come file traccia (OziExplorer) se c'e' almeno un caposaldo georeferenziato.
+I dati sono corretti con la declinazione magnetica.<br><p>
+
+<b>KML</b> (.kml)<br>
+I dati del rilievo possono essere esprtati come file KML (GoogleEarth) se c'e' almeno un caposaldo georeferenziato.
+I dati sono corretti con la declinazione magnetica.<br><p>
+
+Impostazione:<ul style="margin-top=0">
+<ul>
+<li><u>capisaldi</u></li>
+<li><u>splays</u></li>
+</ul>
+<br><p>
+
+<b>CSV</b> (.csv)<br>
+I datidel rilievo possono esser esportati come lista di righe dati, i cui campi sono separati da virgola.
+<ul style="margin-top=0">
+<li>caposaldo DA</li>
+<li>caposaldo A</li>
+<li>distanza, azimuth, clino</li>
+<li>se presente il flag</li>
+</ul><br>
+I commenti ai tiri non seon oesportati. Una breve intestazione viene messa prima della lista dei dati.<br><p>
+
+<b>DXF</b> (.dxf)<br>
+I dati del rilievo possono esser esportati come DXF 3D con layers
+<ul style="margin-top=0">
+<li>stations</li> (capisaldi)
+<li>legs</li> (battute)
+<li>splays</li>
+</ul><br>
+I dati sono corretti con la declinazione magnetica.<br><p>
+
+<h4>ESPORTAZIONE DISEGNI</h4>
+
+<b>Therion</b> (.th2)<br>
+<i>Therion</i> e' il programma di disegno di riferimento per TopoDroid.<br><p>
+Gli schizzi vengono esportati in formato Therion alla scala 1:39.37<br><p>
+
+Impostazioni:<ul style="margin-top=0">
+<li>aggiungere un punto extra ai <u>bordi area</u>. Quando chiudi una linea in xtherion, le viene aggiunto un punto finale coincidente con quello iniziale.
+La sintassi Therion non lo richiede e le linee chiuse in TopoDroid non ce l'hanno. Con questa opzione puoi richiedere che TopoDroid aggiunga un punto quando esporta le linee chiuse.</li>
+<li><u>punti station</u> inseriti automaticamente. [default: si].</li>
+<li>aggiungere <u>splays</u> agli scrap (come linee di tipo "u:splay") [default: no].</li>
+</ul><p>
+
+<u>Note</u>. Dalla versione 3.1 TopoDroid salva gli schizzi in formato binario per efficienza.<br>
+Le versioni precedenti salvano gli schizzi in formato Therion. La conversione da Therion a binario e' "automatica" quando viene aperto un disegno:
+se TopoDroid non trova il file binario cerca di caricare il file Therion.<br><p>
+
+<b>cSurvey</b> (.csx)<br>
+Questo export contiene sia pianta che profilo, oltre ai dati del rilievo.
+Le sezioni trasversali sono incluse nella posizione dei punti "section".<br>
+L'attributo "cave" e' impostatao con il nome del rilievo, e "branch" con il nome dello schizzo.
+Le battute, gli splay e gli schizzi condividono questi attributi.<br><p>
+
+Se il tuo rilievo ha un solo schizzo questo export contiene tutto il rilievo.
+Se ci sono piu' schizzi devi esportarli tutti uno ad uno, e farne la fusione con cSurvey.<br><p>
+
+Gli oggetti del disegno vengono distribuiti sugli opportuni layer di cSurvey.<br><p>
+
+
+<b>DXF</b> (.dxf)<br>
+Gli schizzi possono esser esportati come file DXF 2D con layer per ogni tipo di strumento di disegno, oltre ai layer per i dati.
+Gli oggetti del file DXF 2D vengono messi nel piano Z=0.<br><p>
+
+<u>Note</u>. L'export dei disegni DXF e' verificato con VariCAD: la compatibilita' con AutoCAD non e' garantita.<br><p>
+
+Impostazioni:<ul style="margin-top=0">
+<li><u>scala</u> del DXF</li>
+<li><u>punti section</u>: se i punti section sono automaticamente inseriti per  le sezioni trasversali, i disegni delle sezioni sono
+aggiunti all'export, e posizionati nel punto section.</li>
+<li>punti terminali degli <u>splay</u></li>
+<!-- li>AutoCAD version (6 or 12)</li -->
+</ul><p>
+
+<b>SVG</b> (.svg)<br>
+Gli schizzi possono esser esportati in formato SVG.<br><p>
+
+Impostazioni:<ul style="margin-top=0">
+<li><u>grid</u>: la griglia metrica viene aggiunta all'export (le cellahanno l'unita impostata dall'utente)</li>
+<li><u>punti section</u>: se i punti section sono automaticamente inseriti per  le sezioni trasversali, i disegni delle sezioni sono
+aggiunti all'export, e posizionati nel punto section.</li>
+<li><u>station-points</u>: se abilitato i capisaldi sono inclusi nell'export, altrimenti sono quelli definiti dall'utente</li>
+<li><u>SVG in HTML</u>: se abilitato l'export e' inserito in un documento HTML</li>
+</ul><p>
+
+<b>PNG</b> (.png)<br>
+I disegni possono essere esporati come immagini PNG.<br><p>
+
+Impostazioni:<ul style="margin-top=0">
+<li><u>resoluzione</u> immagine (1 significa 1 m = 40 pixels). La risoluzione PNG che corrisponde ai file Therion th2 e' 5.0
+Se il sistema non ha abbastanza memoria per creare l'immagine PNG alla risoluzione impostata, TopoDroid use una minor risoluzione fino a che' 
+l'esportazione ha successo (se diventa troppo bassa il programma indica il fallimento).</li>
+<li><u>colore</u> sfondo: tre numeri tra 0 (nero) e 255 (saturato) per rosso, verde, e blue rispettivamente.</li>
+</ul><p>
+
+<h4>ESPORTAZIONE CALIBRAZIONE</h4>
+
+Le <a href="page_calib_import.htm">Calibrazioni</a> sono esportati come file CSV (.ccsv).<br><p>
+
+<h4>IMPOSTAZIONI IMPORT/EXPORT</h4>
+<ul style="margin-top=0">
+<li><b>PocketTopo</b> <i>import color-map</i>: tabella corrispondenze colori PocketTopo e strumenti di disegno TopoDroid.</li> 
+<li>stima dell'<i>extend</i> (left/right) per import <b>Compass/VisualTopoi</b> [si']</li>
+<li>formato default export <i>dati</i>: questo export e' fatto automaticamente quando si crea uno zip (e viene inserito nello zip).</li>
+<li>formato default export <i>disegno</i>: questo export viene fatto automaticamente quando si chiude un disegno. Questo richiede un po' di lavoro, percio' su dispositivi di fascia bassa e' consigliabile esportare esplicitamente i disegni solo a fine sessione.</li>
+<li><b>Therion</b> <i>map commands</i>: prima o dopo il blocco centerline [dopo]</li>
+<li><b>Therion</b> <i>auto-stations</i>: punti station automatici [si']. In Therion gliscrap devono avere punti stationper essere referenziati. Puoi scegliere manulamente quali capisaldi inserire oppure puoi lasciare che TopoDroid metta tutti quelli che ritiene opportuno (i capisaldi che cadono all'interno dell'area di disegno)</li>
+<li><b>Therion</b> <i>u:splays</i>: inserire linee splay negli scrap Therion [si']</li>
+<li><b>cSurvey/Compass</b> <i>prefisso</i> col nome del rilievo ai capisaldi [no]</li>
+<li><b>Compass/TopoRobot/WinKarst/Polygon/VisualTopo</b> minimo angolo <i>splay-battuta</i> per il calcolo di LRUD [0.0]. Questo e' pure usato per <b>Survex/Therion</b> se gli LRUD sono richiesti.</li>
+<li><b>Compass swap LR</b>: commuta L e R nell'export Compass.</li>
+<li><b>Survex/Topo</b> <i>terminazione riga</i>: Unix o Windows [Unix]</li>
+<li><b>Survex</b>: export di <i>splay con nome</i> al punto finale [no]</li>
+<li><b>Survex/Therion</b> export con linee <i>LRUD</i> [no]</li>
+<li><b>SVG</b> export con <i>griglia</i> [no]</li>
+<li><b>SVG</b> export inserito in documento <i>HTML</i> [no]</li>
+<li><b>KML</b> export con <i>capisaldi</i> [yes]</li>
+<li><b>KML</b> export con <i>splays</i> [no]</li>
+<li><b>PNG</b>: <i>resoluzione</i> [1.5]. Puo' esser un numero fra 1 e 10. Piu' e' alto piu' e' larga l'immagine. Se troppo elevato il sistema non puo' avere memoria sufficiente per creare il PNG, e TopoDroid la riduce autimaticamente.</li>
+<li><b>PNG</b> <i>colore sfondo</i>: puoi impostare il colore di sfondo delle immagini PNG specificando la tripletta RGB (tra 0 e 255).</li>
+<li><b>DXF</b> export <i>scala</i> [1.0]</li>
+<li><b>DXF</b> with punti finali di <i>splay</i> [no]</li>
+<!--li><i>DXF AutoCAD version</i> for the DXF export: either 6 (AutoCAD R9) or 12 (AutoCAD R13). In version 6 DXF export bezier curves are replaced by polylines. Version 12 DXF export uses splines, but is still buggy.</li-->
+</ul><br><p>
+
+
+<a href="page_finalmap.htm">Mappa finale</a><br>
+<p>
+
+<a href="manual12.htm">&lt; Finestra overview</a> |
+<a href="manual14.htm">Indice &gt;</a>
+
+</body></html>

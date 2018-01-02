@@ -1,0 +1,29 @@
+<html><body>
+
+<h4>Gruppi di dati di calibrazione</h4>
+
+Questa finestra di dialogo si apre toccando il pulsante <u>Gruppo</u> della finestra <i>Dati di calibrazione</i>. <br> <p>
+
+Prima di calcolare il coefficiente di calibrazione, i dati di calibrazione devono essere suddivisi in gruppi di dati aventi lo stesso azimut e inclinazione (rotazione differente). <br> <p>
+
+I gruppi sono identificati da un numero intero che inizia con 1. <br>
+Un dato con il numero 0 è elencato ma escluso dal calcolo del coefficiente. <br>
+I dati "eliminati" hanno il numero di gruppo -1. <br> <p>
+
+È possibile assegnare manualmente il numero di gruppo a ciascun dato di calibrazione (con la finestra di dialogo "Modifica dati di calibrazione"), o lasciare che TopoDroid assegni automaticamente i numeri di gruppo.
+Esistono tre criteri di raggruppamento automatico:
+<ol>
+<li> quattro dati alla volta per ogni gruppo; </li>
+<li> quattro alla volta per i primi 16 dati (quattro gruppi), quindi ogni dato è di per sé un gruppo; </li>
+<li> gruppi in base alla relativa distanza angolare (differenza di direzione). </li>
+</ol>
+<br> <p>
+
+Azioni:
+<ul>
+<li> <b>Ripristina gruppi</b>: tutti i gruppi di dati vengono ripristinati </li>
+<li> <b>OK</b>: i gruppi vengono assegnati (solo ai dati senza un gruppo) </li>
+</ul>
+<br> <p>
+
+</body></html>
