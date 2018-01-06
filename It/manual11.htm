@@ -1,0 +1,71 @@
+<html><body>
+<h3>[11] SEZIONI TRASVERSALI</h3>
+
+Le sezioni trasversali sono gestite in modo speciale: non fanno parte dello schizzo ma sono disegni indipendenti collegati ad esso.
+TopoDroid ha due tipi di sezioni trasversali: sezione di battuta, e sezioni al caposaldo.<br><p>
+
+Le sezioni associate alla pianta sono sempre in un piano verticale. Quelle del profile possono essere orizzontali o verticali.<br><p>
+
+Infine e' possibile aggiungere un commento alle sezioni.<br><p>
+
+<b>Sezioni di battuta</b><br>
+Per dire a TopoDroid che vuoi inserire una sezione tracci una linea di tipo "section" sul disegno (pianta o profilo) nel posto corrispondente alla sezione, in modo che la linea sezione tagli la battuta. Questa linea definisce la posizione e l'orientazione della sezione.<br><p>
+
+Una sezione rappresenta la forma della grotta nel piano di sezione. L'orientazione della seione e' quella di queso piano, ovvero quella della linea perpendicolare al piano e diretta nel verso di vista della sezione. L'orientazione e' definita in base a come tracci la linea "section", ed e' indicata all'estremo di tale linea con un trttino che punta nella direzione di vista.<br>
+La lunghezza del trattino e' modificabile con le impostazioni.<br><p>
+
+Come sezione puoi scegliere fra una foto e uno schizzo. Nel primo caso fai una foto che ti servira' per ricordare la forma della galleria quando stendi la mappa finale.<br><p>
+
+Nel secondo caso devi disegnare lo schizzo della sezione, e TopoDroid ti presenta una canvas con i soliti strumenti di disegno. Come riferimenti hai la battuta attraversata dalla sezione e gli splay ai due capisaldi (projettati sul piano di sezione). Il caposaldo verso cui guardi e' al centro della griglia, e suoi splai sono grigio chiaro. Quello del caposaldo dietro sono grigio scuro. Una volta chiusa, la sezione puo' essere riaperta e modificata selezionando la linea si sezione in "editing" e con un click sul bottone <u>Edit</u>.<br><p>
+
+
+<b>Sezioni in pianta</b><br>
+Le sezioni in pianta sono sempre verticali (inclinazione zero). L'orientazione e' determinata dall'angolo della linea di sezione.
+Spesso il piano e' perpendicolare alla galleria, ma puo' essere ad altri angoli. Per esempio una linea di sezione tracciata da sinistra a destra (eg orizzontale, con angolo 90 gradi dalla verticale) ha la direzione di vista verso il Nord (azimuth 0). Se tracciata un po' in giu', diciamo a 120 gradi, ha azimuth 30 gradi.<br>
+La battuta attraversata dalla sezione viene mostrata verticale quando la sezione ha lo stesso azimuth della battuta. Altrimenti e' piegato un poco a sinistra o destra.<br><p>
+
+<img src="plan-xsection.png" caption="Plan view x-section">
+<br><p>
+
+<b>Sezioni in profilo</b><br>
+Le sezioni in profilo possono essere orizzontali (per esempio per tiri verticali di pozzi) o verticali (gallerie piu' o meno orizzontali). Sono considerate orizzontali se l'inclinazione della battuta supera una soglia definita nelle impostazioni (H-threshold).<br> L'azimuth di quelle verticali e' determinato da quello della battuta.<br><p>
+
+Sezioni orizzontali sono mostrate sempre con il nord verso l'alto. Inoltre hanno una linea di riferimento lunga 5 m, orientata a nord. La battuta e' mostrata col suo azimuth.<br>
+Sezioni verticale hanno l'azimuth della battuta attraversata (oppure quello opposto, se la linea di sezione e' tracciata nel verso opposto) La battuta attraversata e' mostrata verticale.<br><p>
+
+Se la linea di sezione viene traciata da destra a sinistra, la sezione e' orientata verso il basso (inclinazione -90), cioe' una sezione orizzontala vista da sopra. La maggior parte delle volte vorrai disegnarle cosi' perche' viene piu' naturale guardare le mappe da sopra che da sotto.<br><p>
+
+<img src="profile-xsection.png" caption="Profile view x-section">
+<br><p>
+
+<b>Punto "sezione"</b><br>
+Se e' abilitata l'impostazione "auto section points", quando inserisci una sezione (di battuta o al-caposaldo), il corrispondente punto sezione viene automaticamente aggiunto al disegno. Il punto sezione e' un quadratino bianco. Se la sezione e' rimossa, anche il corrispondente punto sezione viene rimosso.<br><p>
+
+<b>File delle sezioni</b><br>
+Ogni sezione viene salvata in un file. I file sono nominati con il nome del rilievo, due caratteri e un numero incrementale, per esempio "MySurvey-xx0.th2", "MySurvey-xx1.th2", etc. La parte del nome "xx0" viene anche mostrata nel dialogo della sezione. Il file viene distrutto quando rimuovi la sezione.<br><p>
+
+Le sezioni possono essere esportate come i disegni nei vari formati eccetto cSurvey. Tuttavia, se e' definito il punto associato, le
+sezioni vengono incluse nelle esportazioni dei disegni in formato DXF, SVG, cSurvey.<br><p>
+
+<b>Sezioni al-caposaldo</b> [E]<br>
+Questo e' un altro modo di inserire le sezioni trasversali. Il dialogo di editing dei capisaldi, mostra le coordinate del caposaldo e i bottoni
+<ul style="margin-top=0">
+<li>"Continua" il rilievo dal caposaldo. Cioe' il caposaldo diventa quello attivo e la prossima battuta viene attaccata ad esso</li>
+<li>"Reimposta" il display della poligonale oltre il caposaldo</li>
+<li>"Toggle" il display degli splay al caposaldo</li>
+<li>"X-Section" [E] disegno della sezione trasversale.</li>
+</ul>
+
+Se lincinazione media delle battute al caposaldo e' inferiore alla soglia "vertical threshold", la sezione trasversale e' nel piano verticale, alttrimenti e' orizzontale. Le sezioni al caposaldo sono utili quando prendi diversi splay intorno per descrivere la forma della galleria.
+Il piano di sezione puo' essere orientato anche con bottone "bussola". Inoltre se il caposaldo ha solo due battute, puo' esser messo nel piano bisecante. Se ne ha una, nel piano ortogonale.
+<br><p>
+
+See also<br>
+<a href="page_sketch_station.htm">Dialo di editing caposaldi</a>,<br>
+<a href="page_line_dialog.htm">Dialogo di editing linee</a>.
+<br><p>
+
+<a href="manual10.htm">&lt; Disegno</a> |
+<a href="manual12.htm">Finestra di overview &gt;</a>
+
+</body></html>

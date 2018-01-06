@@ -1,0 +1,65 @@
+<html><body>
+
+<h4> Disegno caposaldo</h4>
+
+Questa finestra di dialogo ha queste azioni:
+<ul>
+<li> imposta il caposaldo "attivo", ovvero continua il rilievo da questo caposaldo. </li>
+<li> mostra la poligonale nascosta (se applicabile) </li>
+<li> attiva/disattiva la visualizzazione dei tiri nel caposaldo </li>
+<li> pulsanti della sezione-x al caposaldo </li>
+</ul>
+
+
+<b> Caposaldo attivo </b> <br>
+Il caposaldo "attivo" e' quello in cui verranno aggiunti i prossimi tiri scaricati. Quando una battuta viene scaricata (o inserita), il nuovo caposaldo diventa il caposaldo "attivo". Cambiando il caposaldo "attivo" e' possibile continuare il rilievo da un caposaldo nel mezzo del rilievo. Il caposaldo attivo viene visualizzato in verde nell'elenco dei dati di rilievo. <br> <p>
+
+<b> Nascondere la poligonale</b> <br>
+Nascondere parti della poligonale e' utile quando il rilievo e' complicato o va su se stesso.
+In questo caso e' utile vedere solo la parte rilevante della poligonale, nascondendo cio' che si trova al di la' di un caposaldo.
+Se la poligonale oltre un caposaldo e' nascosta, il caposaldo e' evidenziato:
+viola se la poligonale nascosta si trova tra loro ed il caposaldo di origine del rilievo, altrimenti rosso.
+I capisaldi nella parte della poligonale dietro un caposaldo "rosso", non vengono automaticamente salvati come punti capisaldi Therion. Pertanto, scegliendo il caposaldo di origine del rilievo all'interno dello scarto e contrassegnando i capisaldi come barriera, e' possibile evitare i capisaldi spuri nel file di scarto.
+<br>
+La visualizzazione della poligonale puo' essere limitata attraverso la finestra di modifica delle proprieta' delle battute.
+Quando la poligonale oltre il caposaldo e' nascosta, e' presente un pulsante per ripristinarla e mostrarla nella finestra di modifica del caposaldo. <br> <p>
+
+<img src="hiding_stations.png" alt="hiding stations"><br><p>
+
+<b> Sezione-x sul caposaldo </b> <br>
+Le sezioni-x possono essere create nei capisaldi.
+Nella vista in pianta si trovano sul piano verticale (il loro piano e' determinato dall'azimut).
+Nella vista sezione, la sezione-x puo' avere un'inclinazione. Tuttavia quando selezionato attraverso le checkbox "capisaldi"
+sono verticali se l'inclinazione delle battute e' inferiore a un valore specificato (un'impostazione), altrimenti sono
+orizzontali.
+<br>
+
+Se il caposaldo ha solo due tiri collegati, il piano della sezione-x puo' essere dedotto da TopoDroid
+(il bisecante dell'angolo tra i due tiri, o perpendicolare al tiro se e' solo uno).
+Rimane solo l'ambiguita' su da che parte del piano viene posizionata la sezione-x. Questo e' risolto fornendo due pulsanti che specificano la direzione di vista con una coppia di capisaldi.
+<br>
+
+Con l'ultimo pulsante l'utente puo' scegliere la direzione della sezione-x che punta con la videocamera Android.
+<br> <p>
+
+Le sezioni-x su caposaldo possono essere "private" al disegno in cui sono state definite o condivise
+tra tutti i disegni. In quest'ultimo caso, in tutti i disegni si apre la finestra di modifica del caposaldo
+per la stessa sezione-x. Nel primo caso, una sezione-x su caposaldo viene riaperta solo attraverso
+la finestra di modifica del caposaldo nel disegno in cui e' stata definita. <br> <p>
+
+In entrambi i casi la sezione-x viene esportata solo nel disegno che contiene il punto di sezione,
+cioe', nel disegno dove e' stato definito. <br> <p>
+
+La scelta tra sezioni-x "private" e "condivise" su caposaldo viene effettuata al momento della creazione del rilievo
+e non puo' essere modificato in seguito. Quando le sezione-x su caposaldo sono private, puoi inserire un nome per
+distinguere le sezioni-x nello stesso caposaldo in disegni diversi.
+<br> <p>
+
+Il nome di una sezione-x su caposaldo nella vista di pianta e' composto da "NomeRilievo", "xs", "NomeCaposaldo"
+e, se le sezioni-x sono private, il "NomeDisegno". Ad esempio, "survey-xs-0-1p".
+Il nome di una sezione-x su caposaldo nella vista profilo ha "xh" invece di "xs".
+<br> <p>
+
+Le sezioni-x su caposaldo possono avere un commento, proprio come le altre sezioni-x. <br> <p>
+
+</body></html>

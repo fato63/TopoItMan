@@ -1,0 +1,41 @@
+<html><body>
+
+<h4>Riferimento extend</h4>
+
+Questa finestra di dialogo viene aperta toccando il pulsante <u>azimut</u> nella finestra <i>Lista di tiri</i>
+o nella finestra <i>Disegno</i>.<br><p>
+
+Il riferimento extend viene utilizzato per assegnare il profilo di direzione "extend" alle battute della linea mediana.<br><p>
+
+Il pulsante <u>azimut</u> puo' essere visualizzato come una freccia lunga all'interno di un cerchio, orientata verso
+la direzione corrente del riferimento extend, oppure come una freccia corta diretta a sinistra o a destra (per "extend" fissati). <br>
+Quando il profilo "extend" e' calcolato usando il "riferimento extend", e' impostato a destra se differisce dal
+riferimento di meno di 90 gradi. Altrimenti e' impostato a sinistra.<br><p>
+
+Quando e' impostato il <i>Riferimento extend fisso</i>, il pulsante ha solo due stati, DESTRA o SINISTRA.
+Toccando il pulsante si alterna tra loro. GLi extend dei nuovi tiri sono impostati in base allo stato
+del pulsante.<br><p>
+
+Questa finestra di dialogo ha:
+<ul>
+<li>"riferimento extend" <b>azimut</b></li>
+<li>cursore per cambiare il suo valore tra -180 e 180 gradi</li>
+<li><b>campo di testo</b> per inserire il valore numerico dell'azimut, tra 0 e 360 gradi</li>
+<li><b>bussola</b> imposta il valore utilizzando i sensori magnetici Android</li>
+<li><b>sinistra</b> forza "extend" a SINISTRA (-1)</li>
+<li><b>destra</b> forza "extend" a DESTRA (+1)</li>
+<li><b>ok</b>: usa l'azimut per "extend"</li>
+</ul>
+<br><p>
+
+<b>Extend di battuta</b><br>
+Quando viene scaricato un nuovo tiro, TopoDroid imposta automaticamente il suo "extend". Cio' vale anche per i tiri inseriti manualmente, senza specificare l'estensione nella finestra di tiro. Per impostazione predefinita, "extend" e' SINISTRA, DESTRA o VERT (verticale), a seconda dell'angolo che il tiro forma con un azimut di riferimento. La finestra di dialogo "Riferimento extend" consente di modificare l'azimut di riferimento ruotandolo in senso orario o antiorario. In alternativa, l'azimut di riferimento puo' essere impostato utilizzando i sensori della bussola Android.<br><p>
+
+E' anche possibile fissare l'extend per i tiri in arrivo su SINISTRA o DESTRA, selezionando i pulsanti appropriati nella finestra di dialogo.<br><p>
+
+<b>Extend di splay</b><br>
+L'"extend" degli splay e' determinato in base a quello della battuta (o battute) nella stazione di partenza dello splay e l'azimut tra lo splay e la battuta. Il cerchio degli azimut e' diviso in quattro regioni: due "coni" attorno alle direzioni a 90 gradi con la battuta, e i restanti settori, uno attorno alla direzione della battuta, l'altro attorno all'opposto. L'impostazione <i>Soglia verticale splay</i> definisce la larghezza dei due coni.<br><p>
+
+Quando l'angolo tra lo splay e la battuta e' piu' vicino di questo valore a 90 gradi, lo splay ottiene un "extend verticale". Altrimenti prende lo stesso extend della battuta, o il contrario, a seconda del settore in cui l'angolo cade.<br><p>
+
+</body></html>

@@ -1,0 +1,58 @@
+<html><body>
+<h3>[5] DATI DI CALIBRAZIONE</h3>
+
+La finestra dei dati di calibrazione li mostra in una lista. Se la calibrazione non ha ancora dati (come quando e' appena creata) la finesta appare vuota se non per i bottoni in alto. Ogni riga della lista contiene le informazioni di un dato:
+<ul style="margin-top=0">
+<li>indice: indice incrementale che identifica il dato</li>
+<li>gruppo: numero del gruppo cui il dato appartiene</li>
+<li>azimuth, inclinazione e roll, calcolati dai dati grezzi senza la correzione della calobrazione</li>
+<li>errore: differenza angolare fra la direzione (corretta con la calibrazione) del dato e quella media delgruppo [in gradi]</li>
+</ul><br><p>
+
+I dati di calibrazione sono colorati in rosso e blue, alternando fra gruppo di numero pari e dispary. Dati senza gruppo sono in grigio<br><p>
+
+<h4>AZTIONI</h4>
+<ul style="margin-top=0">
+<li>click su un dato apre il dialogo di editing</li>
+</ul><br><p>
+
+<h4>BOTTONI</h4>
+<ul style="margin-top=0">
+<li><u>Download</u> scarica i dati di calibrazione dal DistoX</li>
+<li><u>toggle</u> cambia il DistoX in modalita' calibrazione o normale</li>
+<li><u>Groups</u> suddivide i dati di calibrazione in <a href="page_groups.htm">gruppi</a> automaticamente</li>
+<li>calcola i <a href="page_calib_coeffs.htm">coefficienti di calibrazione</a></li>
+<li>visualizza la <a href="page_calib_distrib.htm">copertura angolare</a> dei dati</li>
+<li><u>Legge</u> e mostra i coefficienti di calibrazione immagazzinati nel DistoX</li>
+<li><u>Scrive</u> i coefficienti di calibrazione sul DistoX. E' attivo solo dopo aver calcolato la calibrazione. I coefficienti di calibrazione possono esser scritti sul DistiX anche dal dialogo che mostra il risutato del calcolo.</li>
+</ul><br><p>
+
+I dati di calibrazione vengono scaricati in blocco "a richiesta". I dati scaricati vengono accodati a quelli gia' presenti nella calibrazione.
+Percio' puoi fare delle misure di calibrazione, scaricarle, verificare se sono sufficienti, e se non lo sono farne altre e scaricarle, e cosi' via.
+Un dato puo' essere disabilitato (impostando il numero di gruppo a zero) o rimosso (impostando il numero ad un valore negativo, -1).
+I dati rimossi non vengono mostrati nella lista (a meno di abilitarne il display col menu specifico), e non concorrono alla assegnazione automatica dei gruppi.<br><p>
+
+<h4>Calcolo della calibrazione</h4>
+Il bottone con la "ruota dentata" esegue il calcolo della calibrazione.
+Se non ci sono abbastanza dati, o gruppi di dati, viene un messaggio di errore.
+Alla fine del calcolo appare un dialogo con i coefficienti della calibrazione.
+Il calcolo puo' fallire se il numero massimo di iterazioni e' superato senza andare sotto l'errore impostato. In tal caso viene un messaggio di errore.<br><p>
+
+<h4>Importante</h4>
+<ul style=margin-top=0">
+<li><b>dati saturati</b>: sono dati con valori del campo magnetico anormali. Una possibile causa e' la presenza di forti campi spuri. Vengono evidenziati con uno sfondo rosso.<li>
+		<li><b>dati zero</b>: sono dati ricevuti parzialmente e quindi incorretti. I valori del dato vengono messi a zero, e non gli viene assegnato alcun numero, seppr sono usati per il calcolo dei gruppi. I dati zero hanno lo sfondo rosa</li>
+</ul><br><p>
+
+<h4>MENU</h4>
+<ul style="margin-top=0">
+<li><u>Display</u>: se mostrare anche i dati cancellati o meno</li>
+<li><u>Valida</u>: <a href="page_validation.htm">validazione</a> della calibrazione con una altra</li>
+<li><u>Impostazioni</u>: sono le stesse della finestra di calibrazione</li>
+<li><u>Aiuto</u></li>
+</ul><br><p>
+
+<a href="manual04.htm">&lt; Finestra di calibrazione</a> |
+<a href="manual06.htm">Dati di rilievo &gt;</a>
+
+</body></html>

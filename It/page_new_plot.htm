@@ -1,0 +1,37 @@
+<html>
+<body>
+
+<h3>Nuovo disegno</h3>
+
+Questa finestra di dialogo si apre toccando il pulsante <u>Nuovo disegno</u> nella finestra <i>Disegni</i>. <br> <p>
+
+Ha due campi di testo e un pulsante di conferma.
+<ul>
+<li> <b>nome</b> e' il nome assegnato al disegno. </li>
+<li> <b>caposaldo di origine </b> </li>
+<li> <b>estesa</b> casella di controllo e <b>proiezione azimut</b> </li>
+</ul> <br> <p>
+
+Puoi utilizzare il <b>nome</b> suggerito da TopoDroid (un numero intero crescente) o immettere un nome mnemonico. Ogni schizzo viene salvato con due file, uno per la pianta,
+l'altro per la sezione. I nomi dei file si ottengono componendo il nome del rilievo, il nome del disegno e un suffisso ("p" per piano, "s" per profilo). Ad esempio lo schizzo "2" del sondaggio "cave" viene salvato nei due file
+"cave-2p.th2" e "cave-2s.th2" (se si sceglie di salvare il disegno in formato Therion). <br> <p>
+
+<b> ATTENZIONE. Il nome del disegno non puo' contenere il carattere speciale '/' (barra) (che e' il separatore del percorso). </b> <br> <p>
+
+Il <b>caposaldo di origine</b> definisce come il disegno e' tradotto rispetto alla linea mediana del rilievo.
+Il disegno fa riferimento alla linea mediana del rilievo che definisce la scala e la rotazione del disegno, ma lascia indefinito come il disegno e' tradotto rispetto alla linea mediana. Questa incertezza viene risolta specificando il caposaldo di origine in (0,0) nel riquadro di riferimento della griglia del disegno. <br> <p>
+
+Il caposaldo di origine determina anche la <b>riduzione dei dati</b> per la linea mediana del rilevamento  per il disegno. Dal punto di vista del disegno la linea mediana e' costruita a partire dal caposaldo di origine e continua fino a quando i dati possono essere legati. La linea mediana risultante
+forma un albero, radicato al caposaldo di origine. Per rendere la griglia meno ingombrante,
+e' possibile nascondere anche la visualizzazione della porzione della linea mediana
+dopo un caposaldo, o prima di essa (cioe' tra il caposaldo di origine ed il caposaldo).
+Questo e' spiegato nella finestra "Disegno caposaldo". <br> <p>
+
+TopoDroid riempie il "caposaldo di origine" con l'ultimo caposaldo o il caposaldo attivo se questo e' impostato.
+Puoi cambiarlo se vuoi un'altro caposaldo come origine del disegno. <br> <p>
+
+Se la casella di controllo <b>estesa</b> e' selezionata, il profilo del disegno viene esteso e <b>l'azimut di proiezione</b> non viene visualizzato.
+In caso contrario, il profilo del disegno viene proiettato con la direzione di visualizzazione dell'azimut della proiezione. <br> <p>
+
+</body>
+</html>

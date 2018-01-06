@@ -2,29 +2,29 @@
 
 <h4>Come calibrare un DistoX</h4>
 
-Il DistoX deve essere calibrato prima dell'uso. La calibrazione è una trasformazione dei dati che tengono conto della
-ortogonalità non perfetta dell'asse dei sensori e l'allineamento con la direzione del laser, e degli effetti dell'elettronica sul campo magnetico. <br><p>
+Il DistoX deve essere calibrato prima dell'uso. La calibrazione e' una trasformazione dei dati che tengono conto della
+ortogonalita' non perfetta dell'asse dei sensori e l'allineamento con la direzione del laser, e degli effetti dell'elettronica sul campo magnetico. <br><p>
 
-Per calcolare i coefficienti di questa trasformazione, è necessario eseguire un numero di tiri "accurati"
-registrando le letture grezze dei sensori. Questo viene fatto quando DistoX si trova in "modalità calibrazione". <br><p>
+Per calcolare i coefficienti di questa trasformazione, e' necessario eseguire un numero di tiri "accurati"
+registrando le letture grezze dei sensori. Questo viene fatto quando DistoX si trova in "modalita' calibrazione". <br><p>
 
 I tiri di calibrazione devono essere effettuati in un luogo libero da influenze magnetiche, ad esempio in una grotta o in un bosco.
 Attenzione agli oggetti metallici e agli oggetti elettronici che potrebbero influire sul DistoX. <br><p>
 
 I suddetti tiri devono coprire tutte le direzioni e per ogni direzione devi prendere un gruppo di tiri a rotazione diversa attorno all'asse del laser. <br>
-Il modo migliore è prendere 14 gruppi di quattro tiri ciascuno, otto gruppi nelle direzioni degli angoli di un cubo e sei in quelli dei centri delle facce del cubo. I quattro tiri in ciascun gruppo dovrebbero essere presi ruotando il DistoX di 90 gradi tra uno e l'altro. Puoi prendere più di 14 gruppi di tiri; più sono e meglio è. <br>
-Come minimo, devi prendere quattro gruppi di quattro tiri in quattro direzioni a 90 gradi nel piano orizzontale, come se queste direzioni stessero andando dal centro di un cubo verso il centro di quattro lati laterali, ed otto tiri dal centro del cubo agli otto vertici. Di nuovo, puoi fare più tiri singoli. <br><p>
+Il modo migliore e' prendere 14 gruppi di quattro tiri ciascuno, otto gruppi nelle direzioni degli angoli di un cubo e sei in quelli dei centri delle facce del cubo. I quattro tiri in ciascun gruppo dovrebbero essere presi ruotando il DistoX di 90 gradi tra uno e l'altro. Puoi prendere piu' di 14 gruppi di tiri; piu' sono e meglio e'. <br>
+Come minimo, devi prendere quattro gruppi di quattro tiri in quattro direzioni a 90 gradi nel piano orizzontale, come se queste direzioni stessero andando dal centro di un cubo verso il centro di quattro lati laterali, ed otto tiri dal centro del cubo agli otto vertici. Di nuovo, puoi fare piu' tiri singoli. <br><p>
 
 I tiri di calibrazione devono essere eseguiti con cura. Tiri imprecisi provocheranno una cattiva calibrazione.
 Quindi utilizzare punti fissi (ad esempio, un punto nel muro o su un albero) e distanti (pochi metri) in modo che la precisione di puntamento del laser sia migliore della precisione di calibrazione desiderata (2 cm a 5 m sono circa 0,2 gradi). <br><p>
 
-Dopo aver effettuato i tiri di calibrazione, scaricali con TopoDroid. Non è necessario attendere di prendere tutti i tiri di calibrazione per scaricarli: quando si scaricano alcuni tiri questi vengono aggiunti a quelli già presenti nella calibrazione. Quindi se per sbaglio fai cinque tiri invece di quattro, scarica i dati e cancellane uno in TopoDroid. <br><p>
+Dopo aver effettuato i tiri di calibrazione, scaricali con TopoDroid. Non e' necessario attendere di prendere tutti i tiri di calibrazione per scaricarli: quando si scaricano alcuni tiri questi vengono aggiunti a quelli gia' presenti nella calibrazione. Quindi se per sbaglio fai cinque tiri invece di quattro, scarica i dati e cancellane uno in TopoDroid. <br><p>
 
-Prima di calcolare la calibrazione devi dire a TopoDroid come i tiri di calibrazione sono raggruppati in base alla direzione, cioè devi assegnare un gruppo a ogni tiro. I gruppi sono denotati con numeri interi positivi. Un tiro con gruppo "0" (zero) o nessun gruppo, non viene utilizzato per calcolare la calibrazione. I tiri cancellati di solito non sono mostrati nella lista. <br> <p>
+Prima di calcolare la calibrazione devi dire a TopoDroid come i tiri di calibrazione sono raggruppati in base alla direzione, cioe' devi assegnare un gruppo a ogni tiro. I gruppi sono denotati con numeri interi positivi. Un tiro con gruppo "0" (zero) o nessun gruppo, non viene utilizzato per calcolare la calibrazione. I tiri cancellati di solito non sono mostrati nella lista. <br> <p>
 
 TopoDroid implementa tre criteri per assegnare automaticamente i gruppi:
 <ul>
-<li> "ogni gruppo con quattro tiri". Questa è la politica predefinita e corrisponde alla procedura descritta sopra. </li>
+<li> "ogni gruppo con quattro tiri". Questa e' la politica predefinita e corrisponde alla procedura descritta sopra. </li>
 <li> "quattro gruppi di quattro tiri, seguiti da singoli tiri" </li>
 <li> "Assegnazione di gruppi di tiri in base alla differenza angolare tra gli scatti" </li>
 </ul>
@@ -32,9 +32,9 @@ TopoDroid implementa tre criteri per assegnare automaticamente i gruppi:
 I numeri di gruppo possono essere assegnati o modificati modificando i tiri di calibrazione. Toccare un tiro nell'elenco per aprire la finestra di modifica.
 <br>
 
-Dopo aver definito i gruppi di tiri, è possibile calcolare la calibrazione.
+Dopo aver definito i gruppi di tiri, e' possibile calcolare la calibrazione.
 Oltre ai coefficienti di calibrazione, la finestra di dialogo mostra l'errore medio, la sua deviazione standard e l'errore massimo.
-Inoltre c'è un istogramma con la distribuzione degli errori per i dati di calibrazione. Questo grafico ha due linee verticali:
+Inoltre c'e' un istogramma con la distribuzione degli errori per i dati di calibrazione. Questo grafico ha due linee verticali:
 un marcatore giallo a 0,5 gradi e uno rosso a 1 grado. <br><p>
 
 <img src="calib_data.png" caption = "Direzioni dei tiri di calibrazione">
@@ -42,13 +42,13 @@ un marcatore giallo a 0,5 gradi e uno rosso a 1 grado. <br><p>
 
 Per riassumere, ecco i passi necessari per calibrare il DistoX:
 <ul>
-<li> attiva DistoX in modalità calibrazione </li>
+<li> attiva DistoX in modalita' calibrazione </li>
 <li> riprendi i dati di calibrazione </li>
 <li> scarica i tiri su Topodroid </li>
 <li> assegna i gruppi ai tiri (automaticamente o manualmente) </li>
 <li> calcola i coefficienti di calibrazione </li>
 <li> carica i coefficienti su DistoX </li>
-<li> ripristina il DistoX in modalità normale </li>
+<li> ripristina il DistoX in modalita' normale </li>
 </ul>
 <br><p>
 

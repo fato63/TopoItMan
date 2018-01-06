@@ -1,0 +1,38 @@
+<html><body>
+
+<h4>Auto-wall</h4>
+
+A livello sperimentale il pulsante "autowall" e' presente nella finestra di modifica del tiro. <br> <p>
+
+Auto-wall (o pareti automatiche) e' una tecnica per ottenere rapidamente una mappa approssimativa di una semplice grotta, che consiste solo del contorno delle pareti.
+Non e' un sostituto per un buon disegno della grotta.
+<br> <p>
+
+Un risultato migliore puo' essere ottenuto con la ricostruzione del modello 3D, purche' si disponga di un denso set di punti di splay.
+Proietta il contorno sul piano orizzontale per la vista in pianta e taglia un piano verticale per la vista profilo.
+<br> <p>
+
+Con le auto-wall si dice a TopoDroid di disegnare pareti a destra e a sinistra di uno tiro interpolando attraverso i punti finali degli splay. E' necessario scegliere un meccanismo di auto-wall attraverso le impostazioni.
+Al momento ci sono due algoritmi di auto-wall: <i>convesso</i> e <i>Delaunay</i>. <br> <p>
+
+Per le pareti <i>convesse</i>, viene tracciata una polilinea che collega i punti finali piu' esterni delle immagini. Per creare una parete ci deve essere almeno un punto finale di splay sul lato dello tiro. In questo caso, vengono tracciate due linee di parete, una su ciascun lato del tiro, se possibile. <br> <p>
+
+La parete <i>Delaunay</i> si basa su una triangolazione di Delaunay degli endpoint di splay (piu' otto punti "all'infinito") e sulle associate cellule di Voronoi. Ogni endpoint di splay e' associato al centro piu' lontano delle celle a cui appartiene. Dalle celle all'infinito viene costruito uno scafo convesso. Questo viene quindi ridotto con gli endpoint di splay per i quali il centro associato si trova all'esterno dello scafo. Viene tracciato un singolo bordo parete chiusa, di solito contenente il tiro. <br> <p>
+
+Le auto-wall si applicano a un tiro alla volta e non tengono conto dei tiri vicini. Pertanto e' probabile che un auto-wall "entri" nel vicino pezzo di galleria o lo perda. Dovresti quindi modificare la regolazione automatica della parete per questi inconvenienti, ovvero inserire punti per i pezzi mancanti ed eliminare o spostare i punti che cadono nella galleria vicina. <br> <p>
+
+Tramite le impostazioni e' possibile specificare il limite superiore di clino delle immagini prese in considerazione per le pareti nella vista di pianta e il limite inferiore di clino per la vista di profilo. Altre impostazioni ti consentono di selezionare la quantita' di concavita' consentita e la distanza minima [in m] tra i punti di espansione sulla parete. <br> <p>
+
+<ul style = "margin-top: 0; margin-bottom: 0">
+    <li> <i>Tipo di parete</i>: il tipo di parete automatici. Il valore predefinito e' "none" (disabilitato). </li>
+    <li> <i>Soglia splay in pianta</i>: massima inclinazione degli splay utilizzati nelle pareti automatiche nella vista in pianta. </li>
+    <li> <i>Soglia splay sezione</i>: inclinazione minima degli splay utilizzati nelle pareti automatiche nella vista profilo. </li>
+    <li> <i>Separazione punti</i>: separazione minima dei punti splay lungo la direzione del tiro. Se due splay sono piu' vicini di questo valore, viene utilizzato solo lo splay con la maggiore distanza dal tiro. </li>
+    <li> <i>Passo punto</i>: massima distanza lungo le pareti tra due punti di linea. Se un segmento di parete che collega due splay e' troppo lungo, viene diviso interpolando i punti in mezzo</li>
+    <li> <i>Concavita'</i>: quantita' accettata di concavita' della parete. </li>
+</ul> <br> <p>
+
+<i>Attenzione</i>
+Se si disegnano due auto-wall per lo stesso tiro, si ottengono due copie delle linee della parete.
+
+</body></html>

@@ -1,0 +1,135 @@
+<html>
+<body>
+
+<h4>Guida di riferimento del DistoX</h4>
+
+<i> Ecco un riassunto delle funzioni di DistoX.<br>
+I manuali utente ufficiali sono disponibili su http://paperless.bheeh.ch </i>
+<br><p>
+
+Codici di errore: <br>
+<ul>
+<li> 252: temperatura troppo alta </li>
+<li> 253: temperatura troppo bassa </li>
+<li> 255: troppo debole sigma </li>
+<li> 256: segnale troppo forte </li>
+<li> 257: troppa luce di fondo </li>
+<li> 260: raggio laser interrotto </li>
+</ul>
+<br> <p>
+
+<ul>
+<li> DIST: accensione / avvio laser / misura </li>
+<li> CLR: cancella l'operazione corrente, spegne il laser </li>
+<li> CLR (2 secondi): disattiva il dispositivo </li>
+<li> MEM: voci di memoria </li>
+<li> REF: attiva la distanza di riferimento </li>
+</ul>
+<br><p>
+
+<h3> DistoX2 - X310 </h3>
+
+<ul>
+<li> TIMER (laser acceso): timer di avvio (misurazione automatica) </li>
+<li> TIMER (laser spento): imposta l'intervallo del timer (con PIU'/MENO) </li>
+<li> SMART: informazioni supplementari sulla misura </li>
+<li> FUNC: informazioni sul dispositivo </li>
+</ul>
+<br> <p>
+
+Due secondi: <br>
+<Ul>
+<li> DIST (con laser acceso): misura </li>
+<li> CLR: spegnimento </li>
+<li> CLR + SMART: attiva/disattiva modalita' calibrazione</li>
+<li> CLR + MEM: cancella memoria non inviata </li>
+<li> CLR + FUNC: attiva/disattiva il bluetooth </li>
+<li> CLR + MINUS: spegnimento bloccato </li>
+<li> REF: riferimento anteriore </li>
+<li> REF + FUNC: riferimento posteriore </li>
+<li> REF + PLUS: attiva/disattiva la luce del display </li>
+<li> REF + MINUS: attiva/disattiva il segnale acustico </li>
+<li> MEM: unita' di distanza </li>
+<li> MEM + SMART: unita' angolari (grad/deg) </li>
+<li> MEM + FUNC: attiva/disattiva la modalita' silenziosa </li>
+<li> MEM + MINUS: attiva/disattiva la modalita' backsight [2.4] </li>
+<li> SMART + MINUS: attiva/disattiva il controllo triplo tiro [2.4] </li>
+</ul>
+<br> <p>
+
+Cinque secondi: <br>
+<ul>
+<li> FUNC + SMART: cambia il tipo di batteria </li>
+<li> FUNC + CLR + MEM: ripristino ad impostazioni di fabbrica </li>
+<li> DIST + PLUS + MINUS (accensione): modalita' bootloader </li>
+</ul>
+<br> <p>
+
+
+Ulteriori informazioni sulla misura: <br>
+<ol>
+<li> azimuth, distanza H, distanza V, distanza </li>
+<li> rotazione, immersione </li>
+<li> M, G </li>
+<li> accel. on-board, valori raw x, y, z (*) </li>
+<li> accel. separato, valori raw x, y, z (*) </li>
+<li> campo magnetico, valori raw x, y, z (*) </li>
+</ol>
+<br>
+
+<ol>
+<li> accel. combinato. x, y, z </ li>
+<li> campo magnetico x, y, z </ li>
+<li> accel. on-board x, y, z (*) </ li>
+<li> accel. separato x, y, z (*) </ li>
+</ol>
+<br> <p>
+
+Informazioni sul dispositivo: <br>
+<ol>
+<li> batteria </li>
+<li> versione hw/fw, numero di serie </li>
+<li> mostra il livello di luce (1:10) [2.3] </li>
+<li> offset del capotasto (-128: 127) [2.3] </li>
+</ol>
+<br> <p>
+
+<h3> DistoX - A3 </h3>
+
+<ul>
+<li> AREA (retro ref.): visualizzazione continua di azimut+clino (*) </li>
+<li> AREA + REF (fronte rif.): visualizzazione continua di rotazione+immersione (*) </li>
+<li> AREA * 2: versione del firmware e numero di serie </li>
+<li> UNITÀ: attiva/disattiva la luce del display </li>
+<li> AREA * 2 + REF * 2 + CLR: attiva/disattiva la modalita' silenziosa </li>
+</ul>
+(*) Non eseguire misurazioni in questa modalita'
+<br> <p>
+
+Due secondi: <br>
+<ul>
+<li> UNITÀ (in retro ref.): unita' di distanza </li>
+<li> UNITÀ (di fronte rif.): ciclo "unita' di angolo/BT" </li>
+<li> MEM * 10 + UNITS: attiva/disattiva modalita' calibrazione</li>
+</ul>
+<br>
+
+Cinque secondi: <br>
+<ul>
+<li> CLR + PLUS: attiva/disattiva il segnale acustico </li>
+</ul>
+<br>
+
+Ciclo "Unita' di angolo/BT" <br>
+<ul>
+<li> bussola off, BT off </li>
+<li> bussola on (grad), BT off </li>
+<li> bussola on (grad), BT on </li>
+<li> bussola on (deg), BT off </li>
+<li> bussola on (deg), BT on </li>
+</ul>
+<br> <p>
+
+
+</body>
+</html>

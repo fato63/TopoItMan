@@ -4,11 +4,11 @@
 
 TopoDroid implementa l'annullamento/ripristino (undo/redo) memorizzando in una "pila" (stack) le azioni di disegno/cancellazione/modifica. Quando annulli qualcosa, l'azione viene posta in cima alla pila. L'annullamento equivale a spostare il puntatore alla pila (oltre a influire sul disegno). Il ripristino sposta il puntatore alla pila in su (e aggiunge nuovamente il disegno). <br> <p>
 
-L'effetto della "continuazione" del disegno sullo stack di undo è che non viene creata una nuova riga e che la riga che è stata continuata viene spostata in cima allo stack di undo. <br> <p>
+L'effetto della "continuazione" del disegno sullo stack di undo e' che non viene creata una nuova riga e che la riga che e' stata continuata viene spostata in cima allo stack di undo. <br> <p>
 
-Le azioni di cancellazione e modifica possono anche essere annullate/ripristinate. Tuttavia il loro effetto sullo stack non è così semplice come per il disegno. <br> <p>
+Le azioni di cancellazione e modifica possono anche essere annullate/ripristinate. Tuttavia il loro effetto sullo stack non e' cosi' semplice come per il disegno. <br> <p>
 
-La cancellazione è un'operazione raster mentre il disegno è composto da elementi vettoriali. I punti degli elementi vettoriali che rientrano nella regione cancellata vengono rimossi. Questo influenza lo stack di undo in due modi. Un oggetto è completamente cancellato (ad esempio, un oggetto punto), viene eliminato dalla pila. Annullando l'operazione di cancellazione si rimette l'oggetto, ma in cima alla pila. Cancellando il centro di una riga rimuovi l'oggetto linea dallo stack e lo sostituisce con due linee che vengono aggiunte in cima allo stack. <br> <p>
-Ad esempio, la cancellazione può cambiare la posizione di una linea nello stack di annullamento. Cancellare il centro di una linea fa cadere la linea dalla pila e mette i due pezzi finali in cima alla pila. Un "annullamento" che segue rimuove i due pezzi e rimette la linea indietro, comunque in cima allo stack. <br> <p>
+La cancellazione e' un'operazione raster mentre il disegno e' composto da elementi vettoriali. I punti degli elementi vettoriali che rientrano nella regione cancellata vengono rimossi. Questo influenza lo stack di undo in due modi. Un oggetto e' completamente cancellato (ad esempio, un oggetto punto), viene eliminato dalla pila. Annullando l'operazione di cancellazione si rimette l'oggetto, ma in cima alla pila. Cancellando il centro di una riga rimuovi l'oggetto linea dallo stack e lo sostituisce con due linee che vengono aggiunte in cima allo stack. <br> <p>
+Ad esempio, la cancellazione puo' cambiare la posizione di una linea nello stack di annullamento. Cancellare il centro di una linea fa cadere la linea dalla pila e mette i due pezzi finali in cima alla pila. Un "annullamento" che segue rimuove i due pezzi e rimette la linea indietro, comunque in cima allo stack. <br> <p>
 
 </body></html>

@@ -6,33 +6,33 @@ Gli strumenti "punto" sono definiti in file di testo. <br> <p>
 
 Due strumenti punto, "utente" e "etichetta" (testo), sono integrati nei programmi.
 Gli altri vengono caricati dalla sottodirectory <i>symbol/point</i> di TopoDroid.
-Questa directory è popolata con gli strumenti punto previsti nell'apk di distribuzione.
-È possibile eliminare gli strumenti non necessari, modificare quelli che si desidera modificare e
+Questa directory e' popolata con gli strumenti punto previsti nell'apk di distribuzione.
+E' possibile eliminare gli strumenti non necessari, modificare quelli che si desidera modificare e
 aggiungerne di nuovi che non sono forniti nell'apk. <br> <p>
 
-Il file dello strumento punto contiene linee che specificano la proprietà dello strumento di disegno.
+Il file dello strumento punto contiene linee che specificano la proprieta' dello strumento di disegno.
 <ul>
 <li>"symbol point" [mandatory]</li>
-<li>"name NOME", dove NOME è il nome predefinito dell'area [obbligatorio]</li>
+<li>"name NOME", dove NOME e' il nome predefinito dell'area [obbligatorio]</li>
 <li>nomi tradotti, ad esempio "nome-es ..." [opzionale]</li>
-<li>"th_name NOME", dove NOME è il nome di Therion e deve essere uguale al nome file [obbligatorio] </li>
+<li>"th_name NOME", dove NOME e' il nome di Therion e deve essere uguale al nome file [obbligatorio] </li>
 <li>"color rgb" (rgb in formato hex) [obbligatorio]</li>
-<li>"orientation FLAG" [facoltativo, falso se mancante, vero se FLAG è "1" o "si"]</li>
-<li>"has_text FLAG" [facoltativo, falso se mancante, vero se FLAG è "1" o "si"]</li>
+<li>"orientation FLAG" [facoltativo, falso se mancante, vero se FLAG e' "1" o "si"]</li>
+<li>"has_text FLAG" [facoltativo, falso se mancante, vero se FLAG e' "1" o "si"]</li>
 <li>"csurvey LAYER TYPE CATEGORY" (Livello Tipo Categoria)</li>
-<li>"path" inizio della definizione del punto. Questo è specificato con i seguenti comandi:
+<li>"path" inizio della definizione del punto. Questo e' specificato con i seguenti comandi:
 <ul>
 <li>"moveTo X Y"</li>
 <li>"lineTo X Y"</li>
 <li>"cubicTo X1 Y1 X2 Y2 X Y"</li>
 <li>"addCircle X Y R": (X,Y) center, R radius</li>
-<li>"arcTo X0 Y0 X1 Y1 FROM_ANGLE SPAN_ANGLE": (X0,Y0 - X1,Y1) rettangolo di delimitazione, angoli in gradi, 0 lungo asse X, la direzione è CW</li>
+<li>"arcTo X0 Y0 X1 Y1 FROM_ANGLE SPAN_ANGLE": (X0,Y0 - X1,Y1) rettangolo di delimitazione, angoli in gradi, 0 lungo asse X, la direzione e' CW</li>
 </ul>
 <li>"endpath" segna la fine della definizione dello strumento </li>
 <li>"endsymbol"</li>
 </ul>
 
 <b>Orientamento</b><br>
-Se l'attributo "orientamento" è impostato, il simbolo del punto può essere ruotato.<br><p>
+Se l'attributo "orientamento" e' impostato, il simbolo del punto puo' essere ruotato.<br><p>
 
 </body></html>

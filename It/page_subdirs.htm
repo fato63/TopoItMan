@@ -4,7 +4,7 @@
 
 Ecco alcune informazioni su come vengono memorizzati i dati del rilievo, i dati di calibrazione ed i disegni. Puoi tranquillamente saltare le seguenti e le prossime due sezioni e tornarvi in seguito, se necessario. <br> <p>
 
-L'app crea la sua directory di base predefinita, chiamata "TopoDroid", nella memoria esterna principale (in genere /sdcard). Questa directory non viene rimossa quando si disinstalla l'app. In questa directory l'app crea due database SQLite. Il primo è "device10.sqlite", in cui sono memorizzati i dati di calibrazione, le informazioni DistoX e altri dati. Il secondo è "distox14.sqlite" e memorizza i dati dei rilievi. L'app crea anche sottodirectory per i diversi tipi di file. Queste sottodirectory vengono create solo nella directory di base "TopoDroid":
+L'app crea la sua directory di base predefinita, chiamata "TopoDroid", nella memoria esterna principale (in genere /sdcard). Questa directory non viene rimossa quando si disinstalla l'app. In questa directory l'app crea due database SQLite. Il primo e' "device10.sqlite", in cui sono memorizzati i dati di calibrazione, le informazioni DistoX e altri dati. Il secondo e' "distox14.sqlite" e memorizza i dati dei rilievi. L'app crea anche sottodirectory per i diversi tipi di file. Queste sottodirectory vengono create solo nella directory di base "TopoDroid":
 <ul style = "margin-top: 0">
 <li> bin: file del firmware DistoX2 </li>
 <li> ccsv: file di testo CSV delle calibrazioni esportate </li>
@@ -12,7 +12,7 @@ L'app crea la sua directory di base predefinita, chiamata "TopoDroid", nella mem
 <li> Symbol: strumenti di disegno (punti, linee, aree) </li>
 </ul>
 La sottodirectory "symbol" contiene i file degli strumenti di disegno.
-"bin" è usato per memorizzare i file del firmware, sia i file di fabbrica inclusi in TopoDroid che i dump del firmware letti da un DistoX. <br> <p>
+"bin" e' usato per memorizzare i file del firmware, sia i file di fabbrica inclusi in TopoDroid che i dump del firmware letti da un DistoX. <br> <p>
 
 Le seguenti sottodirectory vengono create in ogni directory di lavoro:
 <ul style="margin-top: 0">

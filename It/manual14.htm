@@ -1,0 +1,55 @@
+<html><body>
+<h3>[14] VISUALIZZATPRE 3D</h3>
+
+<b>Cave3D</b> e' un visualizzatore 3D per file Therion e Loch ed e' utilizzato da TopoDroid per le viste 3D dei rilievi.<br>
+Quando selezioni il menu 3D della finestra <a href="manual06.htm">dati</a>, i dati del rilievo vengiono salvati in formato Therion e
+l'app Cave3D viene aperta per visualizzare tale file.<br><p>
+
+Il modello e' mostrato con una griglia di riferimento orizzontale (blue nord, verde est), oppure una triade di assi (rosa in su').<br><p>
+
+<h4>BOTTONI</h4>
+<ul style="margin-top:0">
+<li><i>Tilt - Move</i>: commuta l avista fra rotazione e traslazione.</li>
+<li><i>Capisaldi</i>: mostra/nasconde i capisaldi.</li>
+<li><i>Splays</i>: mostra/nascone gli splay. Gli splay sono mostrati come segmenti o punti</li>
+<li><i>Pareti</i>: mostra/nasconde le pareti del modello</li>
+<li><i>Projazioni</i>: mostra la pianta, costruita dal modello, projettata sulla griglia orizzontale, oppure la cortina del profilo</li>
+<li><i>Superficie</i>: mostra la superficie (solo se la griglia DEM della superficie sono specificati nel file Therion)</li>
+<li><i>Colore</i> della poligonale: grigia, per rilievo, per profondita'.</li>
+<li><i>Griglia</i>: commuta fra griglia e triade di assi.</li>
+</ul><br><p>
+
+<h4>MENU</h4>
+<ul style="margin-top:0">
+<li><i>Open file</i>: apre un dialogo per selezionare un file Therion da caricare.</li>
+<li>Dialogo di <i>Export</i>. Il modello puo' esser esportato in formato Therion, KML, STL (ascii o binario). Ci sono opzioni per includere splay, pareti, capisaldi e il DEM nell'export.</li>
+<li><i>Info</i>: mostra alcune statistiche del rilievo.</li>
+<li><i>Ico diagram</i>: diagramma 3D delle orientazioni.</li>
+<li><i>Rose diagram</i>: diagramma 2D degli azimuth</li>
+<li><i>Viewpoint</i>: imposta i punto di vista.</li>
+<li><i>Reset</i>: ricentra il modello in vista da sopra, e riscala alla dimensione dello schermo.</li>
+<li><i>Modello 3D</i>: crea o rimuove un modello 3D. Ci sono due tipi di modello: pseudo conevx-hull, e powercrust. Il primo va bene quando gli splay non sono densi, il secondo quando sono densi.</li>
+<li><i>Opzioni</i></li>
+</ul><br><p>
+
+<h4>OPZIONI</h4>
+<ul style="margin-top:0">
+  <li><i>Base path</i>: Directory con i file Therion</li>
+  <li><i>Text size</i>: Dimensione testo etichette </li>
+  <li><i>Buttons size</i>: Dimensione bottoni</li>
+  <li><i>Selection radius</i>: Raggio di selezione</li>
+  <li><i>Top grid</i>: Griglia sopra il modello</li>
+  <li><i>Projections</i>: precalcolo projezioni</li>
+  <li><i>All splay</i>: se usare tutti gli splay per le pareti</li>
+  <li><i>Split triangles</i>: se suddividere triangoli (delle pareti del modello) che si intersecano</li>
+  <li><i>Randomize points</i>: aggiungere un piccola variazione randomica agli splay</li>
+  <li><i>Stretch walls</i>: translare i punti delle pareti di una piccola quantita' lungo la battuta</li>
+</ul><br><p>
+
+<b>Azioni ai capisaldi</b><br>
+Quando i capisaldi sono mostrati, possono esser selezionati toccando sul caposaldo. L'origine del modello puo' esser messa al caposaldo
+selezionato, e si puo' misurare la distanza 3D da un altro caposaldo.<br><p>
+
+<a href="manual14.htm">&lt; Co-surveying</a>
+
+</body></html>
